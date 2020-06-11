@@ -19,6 +19,12 @@
 		D298976C2492B350003625A5 /* UIButton+Neu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897672492B350003625A5 /* UIButton+Neu.swift */; };
 		D298976D2492B350003625A5 /* UIColor+NearColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897682492B350003625A5 /* UIColor+NearColor.swift */; };
 		D298976E2492B350003625A5 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897692492B350003625A5 /* CALayer+Shadow.swift */; };
+		D29897782492B85D003625A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897772492B85D003625A5 /* AppDelegate.swift */; };
+		D298977A2492B85D003625A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897792492B85D003625A5 /* SceneDelegate.swift */; };
+		D298977C2492B85D003625A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298977B2492B85D003625A5 /* ViewController.swift */; };
+		D298977F2492B85D003625A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D298977D2492B85D003625A5 /* Main.storyboard */; };
+		D29897812492B85F003625A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29897802492B85F003625A5 /* Assets.xcassets */; };
+		D29897842492B85F003625A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29897822492B85F003625A5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +42,25 @@
 		D29897672492B350003625A5 /* UIButton+Neu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Neu.swift"; sourceTree = "<group>"; };
 		D29897682492B350003625A5 /* UIColor+NearColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+NearColor.swift"; sourceTree = "<group>"; };
 		D29897692492B350003625A5 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
+		D29897752492B85D003625A5 /* NeumorphicKitExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeumorphicKitExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29897772492B85D003625A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D29897792492B85D003625A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D298977B2492B85D003625A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D298977E2492B85D003625A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D29897802492B85F003625A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D29897832492B85F003625A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D29897852492B85F003625A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D298974724929767003625A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29897722492B85D003625A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D298974C24929767003625A5 /* NeumorphicKit */,
+				D29897762492B85D003625A5 /* NeumorphicKitExamples */,
 				D298974B24929767003625A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				D298974A24929767003625A5 /* NeumorphicKit.framework */,
+				D29897752492B85D003625A5 /* NeumorphicKitExamples.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +124,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D29897762492B85D003625A5 /* NeumorphicKitExamples */ = {
+			isa = PBXGroup;
+			children = (
+				D29897772492B85D003625A5 /* AppDelegate.swift */,
+				D29897792492B85D003625A5 /* SceneDelegate.swift */,
+				D298977B2492B85D003625A5 /* ViewController.swift */,
+				D298977D2492B85D003625A5 /* Main.storyboard */,
+				D29897802492B85F003625A5 /* Assets.xcassets */,
+				D29897822492B85F003625A5 /* LaunchScreen.storyboard */,
+				D29897852492B85F003625A5 /* Info.plist */,
+			);
+			path = NeumorphicKitExamples;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -133,18 +170,39 @@
 			productReference = D298974A24929767003625A5 /* NeumorphicKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D29897742492B85D003625A5 /* NeumorphicKitExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D29897862492B85F003625A5 /* Build configuration list for PBXNativeTarget "NeumorphicKitExamples" */;
+			buildPhases = (
+				D29897712492B85D003625A5 /* Sources */,
+				D29897722492B85D003625A5 /* Frameworks */,
+				D29897732492B85D003625A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeumorphicKitExamples;
+			productName = NeumorphicKitExamples;
+			productReference = D29897752492B85D003625A5 /* NeumorphicKitExamples.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D298974124929767003625A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = CRED;
 				TargetAttributes = {
 					D298974924929767003625A5 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
+					};
+					D29897742492B85D003625A5 = {
+						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
@@ -162,6 +220,7 @@
 			projectRoot = "";
 			targets = (
 				D298974924929767003625A5 /* NeumorphicKit */,
+				D29897742492B85D003625A5 /* NeumorphicKitExamples */,
 			);
 		};
 /* End PBXProject section */
@@ -171,6 +230,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29897732492B85D003625A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29897842492B85F003625A5 /* LaunchScreen.storyboard in Resources */,
+				D29897812492B85F003625A5 /* Assets.xcassets in Resources */,
+				D298977F2492B85D003625A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +264,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D29897712492B85D003625A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D298977C2492B85D003625A5 /* ViewController.swift in Sources */,
+				D29897782492B85D003625A5 /* AppDelegate.swift in Sources */,
+				D298977A2492B85D003625A5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D298977D2492B85D003625A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D298977E2492B85D003625A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D29897822492B85F003625A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29897832492B85F003625A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D298975024929767003625A5 /* Debug */ = {
@@ -329,6 +427,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NeumorphicKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +453,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NeumorphicKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +462,42 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cred.NeumorphicKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D29897872492B85F003625A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeumorphicKitExamples/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cred.NeumorphicKitExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D29897882492B85F003625A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeumorphicKitExamples/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cred.NeumorphicKitExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,6 +520,15 @@
 			buildConfigurations = (
 				D298975324929767003625A5 /* Debug */,
 				D298975424929767003625A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D29897862492B85F003625A5 /* Build configuration list for PBXNativeTarget "NeumorphicKitExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D29897872492B85F003625A5 /* Debug */,
+				D29897882492B85F003625A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NeumorphicKitExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="81S-Ke-xIF">
+                                <rect key="frame" x="132" y="282" width="150" height="342"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-oi-E4J">
+                                        <rect key="frame" x="25" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="ju6-rS-wlm"/>
+                                            <constraint firstAttribute="width" secondItem="Ad2-oi-E4J" secondAttribute="height" multiplier="1:1" id="kbO-Yh-i4E"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPL-98-EHg">
+                                        <rect key="frame" x="0.0" y="130" width="150" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="MbP-C1-WiR"/>
+                                            <constraint firstAttribute="width" constant="150" id="VBF-4Q-nzn"/>
+                                        </constraints>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAZ-qf-2bK">
+                                        <rect key="frame" x="55" y="216" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eAZ-qf-2bK" secondAttribute="height" multiplier="1:1" id="Sfu-le-ut6"/>
+                                            <constraint firstAttribute="width" constant="40" id="UHc-7R-1iN"/>
+                                        </constraints>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wV9-qo-EgI">
+                                        <rect key="frame" x="0.0" y="286" width="150" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Bl9-0q-Yek"/>
+                                            <constraint firstAttribute="width" constant="150" id="HwL-g5-JLj"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="81S-Ke-xIF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UhC-5D-oRR"/>
+                            <constraint firstItem="81S-Ke-xIF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vox-nR-uay"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="neumorphicFlatButton" destination="wV9-qo-EgI" id="TCl-MV-5CV"/>
+                        <outlet property="neumorphicRoundButton" destination="eAZ-qf-2bK" id="JJR-gu-Lxz"/>
+                        <outlet property="neumorphicSoftButton" destination="RPL-98-EHg" id="HmH-Yd-q1z"/>
+                        <outlet property="neumorphicView" destination="Ad2-oi-E4J" id="3jY-2A-L26"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
