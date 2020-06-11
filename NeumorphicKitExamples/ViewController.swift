@@ -11,6 +11,7 @@ import NeumorphicKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var neumorphicView: UIView!
     @IBOutlet weak var neumorphicSoftButton: UIButton!
     @IBOutlet weak var neumorphicRoundButton: UIButton!
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = NeuUtils.baseColor
+        containerStackView.setCustomSpacing(40, after: neumorphicView)
+        
         setupTextAttributes()
         
         neumorphicView.layer.cornerRadius = 20
