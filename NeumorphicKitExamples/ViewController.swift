@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         neumorphicView.applyNeuStyle()
         
         neumorphicSoftButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Soft Button")
-        neumorphicRoundButton.applyNeuBtnStyle(type: .elevatedSoftRound)
+        neumorphicRoundButton.applyNeuBtnStyle(type: .elevatedSoftRound, image: UIImage(named: "back"), imageDimension: 15)
         neumorphicFlatButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Flat Button")
     }
     
