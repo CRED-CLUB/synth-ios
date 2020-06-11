@@ -8,12 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		D298974F24929767003625A5 /* NeumorphicKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D298974D24929767003625A5 /* NeumorphicKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D298975E2492B328003625A5 /* NeuButtonContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897582492B328003625A5 /* NeuButtonContent.swift */; };
+		D298975F2492B328003625A5 /* NeuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897592492B328003625A5 /* NeuConstants.swift */; };
+		D29897602492B328003625A5 /* NeuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298975A2492B328003625A5 /* NeuButtonView.swift */; };
+		D29897612492B328003625A5 /* NeuUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298975B2492B328003625A5 /* NeuUIHelper.swift */; };
+		D29897622492B328003625A5 /* NeuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298975C2492B328003625A5 /* NeuView.swift */; };
+		D29897632492B328003625A5 /* NeuUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298975D2492B328003625A5 /* NeuUtils.swift */; };
+		D298976A2492B350003625A5 /* UIView+Neu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897652492B350003625A5 /* UIView+Neu.swift */; };
+		D298976B2492B350003625A5 /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897662492B350003625A5 /* UIView+Blur.swift */; };
+		D298976C2492B350003625A5 /* UIButton+Neu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897672492B350003625A5 /* UIButton+Neu.swift */; };
+		D298976D2492B350003625A5 /* UIColor+NearColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897682492B350003625A5 /* UIColor+NearColor.swift */; };
+		D298976E2492B350003625A5 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897692492B350003625A5 /* CALayer+Shadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D298974A24929767003625A5 /* NeumorphicKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeumorphicKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D298974D24929767003625A5 /* NeumorphicKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeumorphicKit.h; sourceTree = "<group>"; };
 		D298974E24929767003625A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D29897582492B328003625A5 /* NeuButtonContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuButtonContent.swift; sourceTree = "<group>"; };
+		D29897592492B328003625A5 /* NeuConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuConstants.swift; sourceTree = "<group>"; };
+		D298975A2492B328003625A5 /* NeuButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuButtonView.swift; sourceTree = "<group>"; };
+		D298975B2492B328003625A5 /* NeuUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuUIHelper.swift; sourceTree = "<group>"; };
+		D298975C2492B328003625A5 /* NeuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuView.swift; sourceTree = "<group>"; };
+		D298975D2492B328003625A5 /* NeuUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuUtils.swift; sourceTree = "<group>"; };
+		D29897652492B350003625A5 /* UIView+Neu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Neu.swift"; sourceTree = "<group>"; };
+		D29897662492B350003625A5 /* UIView+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
+		D29897672492B350003625A5 /* UIButton+Neu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Neu.swift"; sourceTree = "<group>"; };
+		D29897682492B350003625A5 /* UIColor+NearColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+NearColor.swift"; sourceTree = "<group>"; };
+		D29897692492B350003625A5 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +68,37 @@
 		D298974C24929767003625A5 /* NeumorphicKit */ = {
 			isa = PBXGroup;
 			children = (
+				D29897572492B312003625A5 /* Source */,
 				D298974D24929767003625A5 /* NeumorphicKit.h */,
 				D298974E24929767003625A5 /* Info.plist */,
 			);
 			path = NeumorphicKit;
+			sourceTree = "<group>";
+		};
+		D29897572492B312003625A5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D29897642492B33F003625A5 /* Extensions */,
+				D29897582492B328003625A5 /* NeuButtonContent.swift */,
+				D298975A2492B328003625A5 /* NeuButtonView.swift */,
+				D29897592492B328003625A5 /* NeuConstants.swift */,
+				D298975B2492B328003625A5 /* NeuUIHelper.swift */,
+				D298975D2492B328003625A5 /* NeuUtils.swift */,
+				D298975C2492B328003625A5 /* NeuView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D29897642492B33F003625A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D29897692492B350003625A5 /* CALayer+Shadow.swift */,
+				D29897672492B350003625A5 /* UIButton+Neu.swift */,
+				D29897682492B350003625A5 /* UIColor+NearColor.swift */,
+				D29897662492B350003625A5 /* UIView+Blur.swift */,
+				D29897652492B350003625A5 /* UIView+Neu.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +144,7 @@
 				TargetAttributes = {
 					D298974924929767003625A5 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -131,6 +181,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29897622492B328003625A5 /* NeuView.swift in Sources */,
+				D298976C2492B350003625A5 /* UIButton+Neu.swift in Sources */,
+				D298975F2492B328003625A5 /* NeuConstants.swift in Sources */,
+				D29897632492B328003625A5 /* NeuUtils.swift in Sources */,
+				D298976E2492B350003625A5 /* CALayer+Shadow.swift in Sources */,
+				D298975E2492B328003625A5 /* NeuButtonContent.swift in Sources */,
+				D298976D2492B350003625A5 /* UIColor+NearColor.swift in Sources */,
+				D29897612492B328003625A5 /* NeuUIHelper.swift in Sources */,
+				D298976B2492B350003625A5 /* UIView+Blur.swift in Sources */,
+				D29897602492B328003625A5 /* NeuButtonView.swift in Sources */,
+				D298976A2492B350003625A5 /* UIView+Neu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +321,7 @@
 		D298975324929767003625A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -275,6 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cred.NeumorphicKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +346,7 @@
 		D298975424929767003625A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
