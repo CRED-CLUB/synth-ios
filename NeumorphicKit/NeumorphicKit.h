@@ -2,8 +2,7 @@
 //  NeumorphicKit.h
 //  NeumorphicKit
 //
-//  Created by Prashant Shrivastava on 11/06/20.
-//  Copyright © 2020 CRED. All rights reserved.
+//  Copyright 2020 Dreamplug Technologies Private Limited
 //
 
 #import <Foundation/Foundation.h>
