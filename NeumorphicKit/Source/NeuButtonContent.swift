@@ -19,9 +19,10 @@ class NeuButtonContent: UIView {
     private var titleLabel: UILabel!
     private var imageDimensionConstraint: NSLayoutConstraint!
     
-    private let circleBlurAmount: CGFloat = 3
-    private let defaultImageDimension: CGFloat = 20
+    private var circleBlurAmount: CGFloat!
     private var contentModel: NeuConstants.NeuButtonContentModel!
+
+    private let defaultImageDimension: CGFloat = 20
 
     /// Used to update content view when state changes
     var state: NeuConstants.NeuButtonState = .normal {
@@ -37,6 +38,7 @@ class NeuButtonContent: UIView {
 
     init(frame: CGRect, contentModel: NeuConstants.NeuButtonContentModel) {
         self.contentModel = contentModel
+        self.circleBlurAmount = contentModel.circleBlurAmount
         super.init(frame: frame)
         setupViews()
     }

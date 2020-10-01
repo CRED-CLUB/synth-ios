@@ -62,6 +62,7 @@ class NeuButtonView: UIView {
         frame = bounds
         layer.cornerRadius = bounds.height/2
         layer.masksToBounds = false
+        baseView.layer.cornerRadius = layer.cornerRadius
         baseView.resizeContentView(to: bounds)
         if baseInnerView != nil {
             baseInnerView.resizeContentView(to: bounds)
@@ -117,22 +118,29 @@ class NeuButtonView: UIView {
 
         buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds, padding: contentPadding), contentModel: NeuUtils.getButtonContentModel(for: type))
         addSubview(buttonContent)
+        
+        hideBaseViewIfNeeded()
     }
     
     private func setupCustomViews() {
 
-        baseModel = customModel?.baseModel ?? baseModel
+        baseModel = customModel.baseModel ?? NeuConstants.NeuButtonModel()
         baseView = NeuView(frame: bounds, cornerRadius: layer.cornerRadius, model: baseModel.viewModel)
         addSubview(baseView)
 
-        if let innerModel = customModel?.innerModel {
+        if let innerModel = customModel.innerModel {
             baseInnerView = NeuView(frame: bounds, cornerRadius: layer.cornerRadius, model: innerModel)
             addSubview(baseInnerView)
         }
 
-        let buttonContentModel = customModel?.buttonContentModel ?? NeuConstants.NeuButtonContentModel()
+        let buttonContentModel = customModel.buttonContentModel ?? NeuConstants.NeuButtonContentModel()
         buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds, padding: contentPadding), contentModel: buttonContentModel)
         addSubview(buttonContent)
+        
+        hideBaseViewIfNeeded()
+    }
+    
+    private func hideBaseViewIfNeeded() {
         
         if hideBaseView {
             baseView.isHidden = true
