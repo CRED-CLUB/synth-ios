@@ -20,6 +20,7 @@ class NeuButtonContent: UIView {
     private var imageDimensionConstraint: NSLayoutConstraint!
     
     private var circleBlurAmount: CGFloat!
+    private var stackContentPadding: CGFloat!
     private var contentModel: NeuConstants.NeuButtonContentModel!
 
     private let defaultImageDimension: CGFloat = 20
@@ -39,6 +40,7 @@ class NeuButtonContent: UIView {
     init(frame: CGRect, contentModel: NeuConstants.NeuButtonContentModel) {
         self.contentModel = contentModel
         self.circleBlurAmount = contentModel.circleBlurAmount
+        self.stackContentPadding = contentModel.stackContentPadding
         super.init(frame: frame)
         setupViews()
     }
@@ -54,7 +56,7 @@ class NeuButtonContent: UIView {
     func resizeContentView(to bounds: CGRect) {
         frame = bounds
         contentView.frame = self.bounds
-        contentStackView.frame = self.bounds
+        contentStackView.frame = self.bounds.insetBy(dx: stackContentPadding, dy: stackContentPadding)
         updateContentView()
     }
 
@@ -93,7 +95,7 @@ class NeuButtonContent: UIView {
         contentView = UIView(frame: bounds)
         addSubview(contentView)
         
-        contentStackView = UIStackView(frame: bounds)
+        contentStackView = UIStackView(frame: bounds.insetBy(dx: stackContentPadding, dy: stackContentPadding))
         addSubview(contentStackView)
         
         contentStackView.axis = .horizontal

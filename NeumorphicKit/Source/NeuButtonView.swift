@@ -35,7 +35,6 @@ class NeuButtonView: UIView {
     init(frame: CGRect, type: NeuConstants.NeuButtonType, hideBaseView: Bool) {
         self.type = type
         self.hideBaseView = hideBaseView
-        self.contentPadding = NeuUtils.getContentPadding(for: type)
         super.init(frame: frame)
         preSetupConfiguration()
         setupViews()
@@ -44,7 +43,6 @@ class NeuButtonView: UIView {
     init(frame: CGRect, customModel: NeuConstants.NeuButtonCustomModel, hideBaseView: Bool) {
         self.customModel = customModel
         self.hideBaseView = hideBaseView
-        self.contentPadding = customModel.contentPadding
         super.init(frame: frame)
         preSetupConfiguration()
         setupCustomViews()
@@ -67,7 +65,7 @@ class NeuButtonView: UIView {
         if baseInnerView != nil {
             baseInnerView.resizeContentView(to: bounds)
         }
-        buttonContent.resizeContentView(to: getContentBounds(bounds: bounds, padding: contentPadding))
+        buttonContent.resizeContentView(to: getContentBounds(bounds: bounds))
         updateBaseView()
     }
     
@@ -116,7 +114,9 @@ class NeuButtonView: UIView {
             addSubview(baseInnerView)
         }
 
-        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds, padding: contentPadding), contentModel: NeuUtils.getButtonContentModel(for: type))
+        let contentModel = NeuUtils.getButtonContentModel(for: type)
+        contentPadding = contentModel.contentPadding
+        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: contentModel)
         addSubview(buttonContent)
         
         hideBaseViewIfNeeded()
@@ -134,7 +134,8 @@ class NeuButtonView: UIView {
         }
 
         let buttonContentModel = customModel.buttonContentModel ?? NeuConstants.NeuButtonContentModel()
-        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds, padding: contentPadding), contentModel: buttonContentModel)
+        contentPadding = buttonContentModel.contentPadding
+        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: buttonContentModel)
         addSubview(buttonContent)
         
         hideBaseViewIfNeeded()
@@ -150,7 +151,7 @@ class NeuButtonView: UIView {
         }
     }
 
-    private func getContentBounds(bounds: CGRect, padding: CGFloat) -> CGRect {
+    private func getContentBounds(bounds: CGRect) -> CGRect {
         return hideBaseView ? bounds : bounds.inset(by: UIEdgeInsets(top: contentPadding, left: contentPadding, bottom: contentPadding, right: contentPadding))
     }
 

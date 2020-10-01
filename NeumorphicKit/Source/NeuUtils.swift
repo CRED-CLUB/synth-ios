@@ -99,6 +99,9 @@ public struct NeuUtils {
         case .elevatedSoft:
             model.normalCircleGradientColors = [baseColor.darken(fraction: 0.25).cgColor, baseColor.lighten(fraction: 0.055).cgColor]
             model.highlightedCircleGradientColors = [baseColor.darken(fraction: 0.5).cgColor, baseColor.lighten(fraction: 0.055).cgColor]
+            model.circleBlurAmount = 3
+            model.contentPadding = 5
+            model.stackContentPadding = 0
         case .elevatedSoftRound:
             break
         case .elevatedFlat:
@@ -118,6 +121,9 @@ public struct NeuUtils {
             
             model.normalCircleGradientColors = [UIColor(red: 36.0/255.0, green: 62.0/255.0, blue: 120.0/255.0, alpha: 1.0).cgColor, UIColor(red: 73.0/255.0, green: 117.0/255.0, blue: 197.0/255.0, alpha: 1.0).cgColor]
             model.highlightedCircleGradientColors = model.normalCircleGradientColors
+            model.circleBlurAmount = 3
+            model.contentPadding = 4
+            model.stackContentPadding = 4
         case .elevatedFlatRound:
             model.normalShadowModel = NeuConstants.NeuShadowModel(xOffset: 1, yOffset: 2, blur: 12, spread: 0, color: .black, opacity: 0.43)
             model.normalBgGradientColors = [UIColor(red: 50.0/255.0, green: 54.0/255.0, blue: 55.0/255.0, alpha: 1.0).cgColor, UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 24.0/255.0, alpha: 1.0).cgColor]
@@ -127,12 +133,9 @@ public struct NeuUtils {
             innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 4, yOffset: 6, blur: 20, spread: 0, color: .black, opacity: 1))
             innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 4, yOffset: 6, blur: 20, spread: 0, color: .black, opacity: 1))
             model.highlightedInnerShadows = innerShadows
+            model.contentPadding = 5
         }
         
         return model
-    }
-    
-    static func getContentPadding(for type: NeuConstants.NeuButtonType) -> CGFloat {
-        return type == .elevatedFlat ? 4 : 5
     }
 }

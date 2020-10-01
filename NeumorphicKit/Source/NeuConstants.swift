@@ -137,11 +137,12 @@ public struct NeuConstants {
         public var highlightedInnerShadows: [NeuShadowModel]?
         public var normalCircleGradientColors: [CGColor]?
         public var highlightedCircleGradientColors: [CGColor]?
-        public var circleBlurAmount: CGFloat
-        
+        public var circleBlurAmount: CGFloat?
+        public var contentPadding: CGFloat?
+        public var stackContentPadding: CGFloat?
+
         public init() {
             self.lightDirection = .base
-            self.circleBlurAmount = 3
         }
     }
     
