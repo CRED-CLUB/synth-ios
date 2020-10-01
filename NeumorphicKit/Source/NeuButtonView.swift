@@ -14,14 +14,14 @@ class NeuButtonView: UIView {
     private var baseInnerView: NeuView!
     private var buttonContent: NeuButtonContent!
 
-    private var type: NeuConstants.NeuButtonType = .elevatedSoft
-    private var baseModel = NeuConstants.NeuButtonModel()
+    private var type: NeuConstants.NeuButtonType!
+    private var baseModel: NeuConstants.NeuButtonModel!
+    private var customModel: NeuConstants.NeuButtonCustomModel!
+    private var contentPadding: CGFloat!
+    private var hideBaseView: Bool!
+
     private var isHighlighted: Bool = false
     private var isEnabled: Bool = true
-    private var contentNormalPadding: CGFloat = 5
-    private var contentType4Padding: CGFloat = 4
-    private var customModel: NeuConstants.NeuButtonCustomModel? = nil
-    private var hideBaseView: Bool = false
 
     /// Used to get current button state
     var neuButtonState: NeuConstants.NeuButtonState {
@@ -35,6 +35,7 @@ class NeuButtonView: UIView {
     init(frame: CGRect, type: NeuConstants.NeuButtonType, hideBaseView: Bool) {
         self.type = type
         self.hideBaseView = hideBaseView
+        self.contentPadding = NeuUtils.getContentPadding(for: type)
         super.init(frame: frame)
         preSetupConfiguration()
         setupViews()
@@ -43,6 +44,7 @@ class NeuButtonView: UIView {
     init(frame: CGRect, customModel: NeuConstants.NeuButtonCustomModel, hideBaseView: Bool) {
         self.customModel = customModel
         self.hideBaseView = hideBaseView
+        self.contentPadding = customModel.contentPadding
         super.init(frame: frame)
         preSetupConfiguration()
         setupCustomViews()
@@ -64,7 +66,7 @@ class NeuButtonView: UIView {
         if baseInnerView != nil {
             baseInnerView.resizeContentView(to: bounds)
         }
-        buttonContent.resizeContentView(to: getContentBounds(bounds: bounds))
+        buttonContent.resizeContentView(to: getContentBounds(bounds: bounds, padding: contentPadding))
         updateBaseView()
     }
     
@@ -113,7 +115,7 @@ class NeuButtonView: UIView {
             addSubview(baseInnerView)
         }
 
-        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: NeuUtils.getButtonContentModel(for: type))
+        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds, padding: contentPadding), contentModel: NeuUtils.getButtonContentModel(for: type))
         addSubview(buttonContent)
     }
     
@@ -129,7 +131,7 @@ class NeuButtonView: UIView {
         }
 
         let buttonContentModel = customModel?.buttonContentModel ?? NeuConstants.NeuButtonContentModel()
-        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: buttonContentModel)
+        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds, padding: contentPadding), contentModel: buttonContentModel)
         addSubview(buttonContent)
         
         if hideBaseView {
@@ -140,8 +142,7 @@ class NeuButtonView: UIView {
         }
     }
 
-    private func getContentBounds(bounds: CGRect) -> CGRect {
-        let contentPadding = type == .elevatedFlat ? contentType4Padding : contentNormalPadding
+    private func getContentBounds(bounds: CGRect, padding: CGFloat) -> CGRect {
         return hideBaseView ? bounds : bounds.inset(by: UIEdgeInsets(top: contentPadding, left: contentPadding, bottom: contentPadding, right: contentPadding))
     }
 
