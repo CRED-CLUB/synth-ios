@@ -34,6 +34,7 @@ public struct NeuConstants {
         case elevatedSoft = "elevated_soft" // embossed button
         case elevatedSoftRound = "elevated_soft_round"  // round embossed button
         case elevatedFlat = "elevated_flat" // flat embossed button
+        case elevatedFlatRound = "elevated_flat_round" // round flat embossed button
     }
 
     /// Defines button states

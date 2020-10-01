@@ -69,6 +69,11 @@ public struct NeuUtils {
             
             buttonModel.normalBgGradientColors = baseModel.bgGradientColors
             buttonModel.highlightedBgGradientColors = baseModel.bgGradientColors
+        case .elevatedFlatRound:
+            baseModel.bgGradientColors = [baseColor.darken(fraction: 0.3).cgColor, baseColor.lighten(fraction: 0.03).cgColor]
+            
+            buttonModel.normalBgGradientColors = baseModel.bgGradientColors
+            buttonModel.highlightedBgGradientColors = baseModel.bgGradientColors
         }
 
         buttonModel.viewModel = baseModel
@@ -78,7 +83,7 @@ public struct NeuUtils {
     /// Gets button inner view model for given button type
     public static func getButtonInnerModel(for buttonType: NeuConstants.NeuButtonType) -> NeuConstants.NeuViewModel? {
         switch buttonType {
-        case .elevatedSoft, .elevatedSoftRound:
+        case .elevatedSoft, .elevatedSoftRound, .elevatedFlatRound:
             return nil
         case .elevatedFlat:
             return getButtonModel(for: .elevatedSoft).viewModel
@@ -97,7 +102,7 @@ public struct NeuUtils {
         case .elevatedSoftRound:
             break
         case .elevatedFlat:
-            model.normalShadowModel = NeuConstants.NeuShadowModel(xOffset: 1, yOffset: 1, blur: 15, spread: 0, color: .black, opacity: 0.45)
+            model.normalShadowModel = NeuConstants.NeuShadowModel(xOffset: 1, yOffset: 2, blur: 15, spread: 0, color: .black, opacity: 0.45)
             model.normalBgGradientColors = [UIColor(red: 66.0/255.0, green: 107.0/255.0, blue: 182.0/255.0, alpha: 1.0).cgColor, UIColor(red: 38.0/255.0, green: 69.0/255.0, blue: 140.0/255.0, alpha: 1.0).cgColor]
             model.highlightedBgGradientColors = model.normalBgGradientColors
             
@@ -109,6 +114,18 @@ public struct NeuUtils {
             var innerShadows: [NeuConstants.NeuShadowModel] = []
             innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 3, yOffset: 4, blur: 8, spread: 0, color: .black, opacity: 1))
             innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 3, yOffset: 4, blur: 8, spread: 0, color: .black, opacity: 1))
+            model.highlightedInnerShadows = innerShadows
+            
+            model.normalCircleGradientColors = [UIColor(red: 36.0/255.0, green: 62.0/255.0, blue: 120.0/255.0, alpha: 1.0).cgColor, UIColor(red: 73.0/255.0, green: 117.0/255.0, blue: 197.0/255.0, alpha: 1.0).cgColor]
+            model.highlightedCircleGradientColors = model.normalCircleGradientColors
+        case .elevatedFlatRound:
+            model.normalShadowModel = NeuConstants.NeuShadowModel(xOffset: 1, yOffset: 2, blur: 12, spread: 0, color: .black, opacity: 0.43)
+            model.normalBgGradientColors = [UIColor(red: 50.0/255.0, green: 54.0/255.0, blue: 55.0/255.0, alpha: 1.0).cgColor, UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 24.0/255.0, alpha: 1.0).cgColor]
+            model.highlightedBgGradientColors = [UIColor(red: 24.0/255.0, green: 26.0/255.0, blue: 27.0/255.0, alpha: 1.0).cgColor, UIColor(red: 56.0/255.0, green: 59.0/255.0, blue: 60.0/255.0, alpha: 1.0).cgColor]
+            
+            var innerShadows: [NeuConstants.NeuShadowModel] = []
+            innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 4, yOffset: 6, blur: 20, spread: 0, color: .black, opacity: 1))
+            innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 4, yOffset: 6, blur: 20, spread: 0, color: .black, opacity: 1))
             model.highlightedInnerShadows = innerShadows
         }
         
