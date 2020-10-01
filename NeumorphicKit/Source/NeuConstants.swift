@@ -158,11 +158,13 @@ public struct NeuConstants {
         public var baseModel: NeuButtonModel?
         public var innerModel: NeuViewModel?
         public var buttonContentModel: NeuButtonContentModel?
+        public var contentPadding: CGFloat?
         
         public init() {
             self.baseModel = NeuButtonModel()
             self.innerModel = nil
             self.buttonContentModel = NeuButtonContentModel()
+            self.contentPadding = 5
         }
     }
 }

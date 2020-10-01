@@ -131,4 +131,8 @@ public struct NeuUtils {
         
         return model
     }
+    
+    static func getContentPadding(for type: NeuConstants.NeuButtonType) -> CGFloat {
+        return type == .elevatedFlat ? 4 : 5
+    }
 }
