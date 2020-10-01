@@ -17,11 +17,11 @@ class NeuButtonView: UIView {
     private var type: NeuConstants.NeuButtonType!
     private var baseModel: NeuConstants.NeuButtonModel!
     private var customModel: NeuConstants.NeuButtonCustomModel!
-    private var contentPadding: CGFloat!
-    private var hideBaseView: Bool!
-
+    
     private var isHighlighted: Bool = false
     private var isEnabled: Bool = true
+    private var hideBaseView: Bool = false
+    private var contentPadding: CGFloat = 0
 
     /// Used to get current button state
     var neuButtonState: NeuConstants.NeuButtonState {
@@ -115,7 +115,7 @@ class NeuButtonView: UIView {
         }
 
         let contentModel = NeuUtils.getButtonContentModel(for: type)
-        contentPadding = contentModel.contentPadding
+        contentPadding = contentModel.contentPadding ?? contentPadding
         buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: contentModel)
         addSubview(buttonContent)
         
@@ -134,7 +134,7 @@ class NeuButtonView: UIView {
         }
 
         let buttonContentModel = customModel.buttonContentModel ?? NeuConstants.NeuButtonContentModel()
-        contentPadding = buttonContentModel.contentPadding
+        contentPadding = buttonContentModel.contentPadding ?? contentPadding
         buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: buttonContentModel)
         addSubview(buttonContent)
         

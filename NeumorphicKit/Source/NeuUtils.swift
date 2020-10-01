@@ -103,6 +103,8 @@ public struct NeuUtils {
             model.contentPadding = 5
             model.stackContentPadding = 0
         case .elevatedSoftRound:
+            model.contentPadding = 5
+            model.stackContentPadding = 0
             break
         case .elevatedFlat:
             model.normalShadowModel = NeuConstants.NeuShadowModel(xOffset: 1, yOffset: 2, blur: 15, spread: 0, color: .black, opacity: 0.45)

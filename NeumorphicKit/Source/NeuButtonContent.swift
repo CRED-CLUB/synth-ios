@@ -19,10 +19,10 @@ class NeuButtonContent: UIView {
     private var titleLabel: UILabel!
     private var imageDimensionConstraint: NSLayoutConstraint!
     
-    private var circleBlurAmount: CGFloat!
-    private var stackContentPadding: CGFloat!
     private var contentModel: NeuConstants.NeuButtonContentModel!
 
+    private var circleBlurAmount: CGFloat = 0
+    private var stackContentPadding: CGFloat = 0
     private let defaultImageDimension: CGFloat = 20
 
     /// Used to update content view when state changes
@@ -39,8 +39,6 @@ class NeuButtonContent: UIView {
 
     init(frame: CGRect, contentModel: NeuConstants.NeuButtonContentModel) {
         self.contentModel = contentModel
-        self.circleBlurAmount = contentModel.circleBlurAmount
-        self.stackContentPadding = contentModel.stackContentPadding
         super.init(frame: frame)
         setupViews()
     }
@@ -89,6 +87,9 @@ class NeuButtonContent: UIView {
     }
     
     private func setupViews() {
+        
+        circleBlurAmount = contentModel.circleBlurAmount ?? circleBlurAmount
+        stackContentPadding = contentModel.stackContentPadding ?? stackContentPadding
         
         layer.cornerRadius = bounds.height/2
         
