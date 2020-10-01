@@ -46,7 +46,16 @@ public extension UIButton {
                 addSubview(neuButtonView)
                 sendSubviewToBack(neuButtonView)
             }
+            setTitle(title, for: .normal)
+            setAttributedTitle(attributedTitle, for: .normal)
+            layoutIfNeeded()
+            
             neuButtonView.setNeuButtonContent(title: title, attributedTitle: attributedTitle, image: image, imageTintColor: imageTintColor, imageDimension: imageDimension)
+            
+            if let label = titleLabel {
+                sendSubviewToBack(label)
+                label.isHidden = true
+            }
         }
     }
     
