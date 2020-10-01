@@ -21,6 +21,7 @@ class NeuButtonView: UIView {
     private var contentNormalPadding: CGFloat = 5
     private var contentType4Padding: CGFloat = 4
     private var customModel: NeuConstants.NeuButtonCustomModel? = nil
+    private var hideBaseView: Bool = false
 
     /// Used to get current button state
     var neuButtonState: NeuConstants.NeuButtonState {
@@ -31,15 +32,17 @@ class NeuButtonView: UIView {
 
     // MARK: - init methods
 
-    init(frame: CGRect, type: NeuConstants.NeuButtonType) {
+    init(frame: CGRect, type: NeuConstants.NeuButtonType, hideBaseView: Bool) {
         self.type = type
+        self.hideBaseView = hideBaseView
         super.init(frame: frame)
         preSetupConfiguration()
         setupViews()
     }
     
-    init(frame: CGRect, customModel: NeuConstants.NeuButtonCustomModel) {
+    init(frame: CGRect, customModel: NeuConstants.NeuButtonCustomModel, hideBaseView: Bool) {
         self.customModel = customModel
+        self.hideBaseView = hideBaseView
         super.init(frame: frame)
         preSetupConfiguration()
         setupCustomViews()
@@ -128,11 +131,18 @@ class NeuButtonView: UIView {
         let buttonContentModel = customModel?.buttonContentModel ?? NeuConstants.NeuButtonContentModel()
         buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: buttonContentModel)
         addSubview(buttonContent)
+        
+        if hideBaseView {
+            baseView.isHidden = true
+            if baseInnerView != nil {
+                baseInnerView.isHidden = true
+            }
+        }
     }
 
     private func getContentBounds(bounds: CGRect) -> CGRect {
         let contentPadding = type == .elevatedFlat ? contentType4Padding : contentNormalPadding
-        return bounds.inset(by: UIEdgeInsets(top: contentPadding, left: contentPadding, bottom: contentPadding, right: contentPadding))
+        return hideBaseView ? bounds : bounds.inset(by: UIEdgeInsets(top: contentPadding, left: contentPadding, bottom: contentPadding, right: contentPadding))
     }
 
     private func updateBaseView() {
