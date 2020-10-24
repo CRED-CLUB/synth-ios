@@ -10,6 +10,7 @@ import UIKit
 
 class ButtonsViewController: UIViewController {
     
+    @IBOutlet weak var contentScrollView: UIScrollView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lineView: UIView!
@@ -21,6 +22,9 @@ class ButtonsViewController: UIViewController {
     @IBOutlet weak var elevatedSoftRoundLabel: UILabel!
     @IBOutlet weak var elevatedSoftRoundView: UIView!
     @IBOutlet weak var elevatedSoftRoundButton: UIButton!
+    @IBOutlet weak var elevatedFlatLabel: UILabel!
+    @IBOutlet weak var elevatedFlatView: UIView!
+    @IBOutlet weak var elevatedFlatButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,7 @@ class ButtonsViewController: UIViewController {
     private func setupViews() {
         
         view.backgroundColor = AppConstants.baseColor
+        contentScrollView.delaysContentTouches = false
         
         titleLabel.attributedText = AppConstants.getBorderedAttributedText(with: "buttons")
         lineView.backgroundColor = UIColor(red: 178.0/255.0, green: 134.0/255.0, blue: 99.0/255.0, alpha: 0.2)
@@ -49,6 +54,14 @@ class ButtonsViewController: UIViewController {
         
         updateView(view: elevatedSoftRoundView, label: elevatedSoftRoundLabel, with: "ELEVATED SOFT ROUND")
         elevatedSoftRoundButton.applyNeuBtnStyle(type: .elevatedSoftRound, image: UIImage(named: "back"), imageDimension: 18)
+        
+        let flatTextAttributes: [NSAttributedString.Key:Any] = [
+            .foregroundColor: UIColor.white.withAlphaComponent(0.9),
+            .kern: 0.54,
+            .font: UIFont.systemFont(ofSize: 14, weight: .semibold)
+        ]
+        updateView(view: elevatedFlatView, label: elevatedFlatLabel, with: "ELEVATED FLAT")
+        elevatedFlatButton.applyNeuBtnStyle(type: .elevatedFlat, attributedTitle: NSAttributedString(string: "Idle now", attributes: flatTextAttributes))
     }
     
     private func setupBackButton() {
