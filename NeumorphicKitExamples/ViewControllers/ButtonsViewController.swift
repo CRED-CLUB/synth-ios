@@ -25,6 +25,9 @@ class ButtonsViewController: UIViewController {
     @IBOutlet weak var elevatedFlatLabel: UILabel!
     @IBOutlet weak var elevatedFlatView: UIView!
     @IBOutlet weak var elevatedFlatButton: UIButton!
+    @IBOutlet weak var elevatedFlatRoundLabel: UILabel!
+    @IBOutlet weak var elevatedFlatRoundView: UIView!
+    @IBOutlet weak var elevatedFlatRoundButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +65,9 @@ class ButtonsViewController: UIViewController {
         ]
         updateView(view: elevatedFlatView, label: elevatedFlatLabel, with: "ELEVATED FLAT")
         elevatedFlatButton.applyNeuBtnStyle(type: .elevatedFlat, attributedTitle: NSAttributedString(string: "Idle now", attributes: flatTextAttributes))
+        
+        updateView(view: elevatedFlatRoundView, label: elevatedFlatRoundLabel, with: "ELEVATED FLAT ROUND")
+        elevatedFlatRoundButton.applyNeuBtnStyle(type: .elevatedFlatRound, attributedTitle: NSAttributedString(string: "Spin", attributes: textAttributes))
     }
     
     private func setupBackButton() {
