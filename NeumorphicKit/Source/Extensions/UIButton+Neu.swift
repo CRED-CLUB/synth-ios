@@ -18,10 +18,10 @@ public extension UIButton {
     ///   - image: sets image to UIButton, this image is aligned to left if both image and text present
     ///   - imageTintColor: sets tint color of UIImageView, default value is transparent
     ///   - imageDimension: sets image dimension of UIImageView, default image dimension is 20 (aspectRatio of image is 1:1)
-    func applyNeuBtnStyle(type: NeuConstants.NeuButtonType, title: String? = nil, attributedTitle: NSAttributedString? = nil, image: UIImage? = nil, imageTintColor: UIColor = .clear, imageDimension: CGFloat = 20, hideBaseView: Bool = false) {
+    func applyNeuBtnStyle(type: NeuConstants.NeuButtonType, title: String? = nil, attributedTitle: NSAttributedString? = nil, image: UIImage? = nil, imageTintColor: UIColor = .clear, imageDimension: CGFloat = 20, hideBasePit: Bool = false) {
 
         preNeuBtnStyleSetup()
-        setupNeuButtonViewHolder(type: type, hideBaseView: hideBaseView)
+        setupNeuButtonViewHolder(type: type, hideBasePit: hideBasePit)
         updateNeuBtnContent(title: title, attributedTitle: attributedTitle, image: image, imageTintColor: imageTintColor, imageDimension: imageDimension)
     }
     
@@ -32,10 +32,10 @@ public extension UIButton {
     ///            custom model can be passed to configure each layer individually so that they are mutually independant of each other
     ///
     /// title, attributedTitle, image, imageTintColor and imageDimension works same as above
-    func applyCustomNeuBtnStyle(model: NeuConstants.NeuButtonCustomModel, title: String? = nil, attributedTitle: NSAttributedString? = nil, image: UIImage? = nil, imageTintColor: UIColor = .clear, imageDimension: CGFloat = 20, hideBaseView: Bool = false) {
+    func applyCustomNeuBtnStyle(model: NeuConstants.NeuButtonCustomModel, title: String? = nil, attributedTitle: NSAttributedString? = nil, image: UIImage? = nil, imageTintColor: UIColor = .clear, imageDimension: CGFloat = 20, hideBasePit: Bool = false) {
         
         preNeuBtnStyleSetup()
-        setupNeuButtonViewHolder(customModel: model, hideBaseView: hideBaseView)
+        setupNeuButtonViewHolder(customModel: model, hideBasePit: hideBasePit)
         updateNeuBtnContent(title: title, attributedTitle: attributedTitle, image: image, imageTintColor: imageTintColor, imageDimension: imageDimension)
     }
     
@@ -65,15 +65,15 @@ public extension UIButton {
         backgroundColor = .clear
     }
     
-    private func setupNeuButtonViewHolder(type: NeuConstants.NeuButtonType? = nil, customModel: NeuConstants.NeuButtonCustomModel? = nil, hideBaseView: Bool) {
+    private func setupNeuButtonViewHolder(type: NeuConstants.NeuButtonType? = nil, customModel: NeuConstants.NeuButtonCustomModel? = nil, hideBasePit: Bool) {
         
         guard type != nil || customModel != nil else { return }
         if neuButtonViewDataHolder == nil {
             var neuButtonView: NeuButtonView? = nil
             if let typeT = type {
-                neuButtonView = NeuButtonView(frame: bounds, type: typeT, hideBaseView: hideBaseView)
+                neuButtonView = NeuButtonView(frame: bounds, type: typeT, hideBasePit: hideBasePit)
             } else if let customModelT = customModel {
-                neuButtonView = NeuButtonView(frame: bounds, customModel: customModelT, hideBaseView: hideBaseView)
+                neuButtonView = NeuButtonView(frame: bounds, customModel: customModelT, hideBasePit: hideBasePit)
             }
             
             guard let neuButtonViewT = neuButtonView else {
