@@ -18,6 +18,9 @@ class ButtonsViewController: UIViewController {
     @IBOutlet weak var elevatedSoftView: UIView!
     @IBOutlet weak var elevatedSoftWithImageButton: UIButton!
     @IBOutlet weak var elevatedSoftButton: UIButton!
+    @IBOutlet weak var elevatedSoftRoundLabel: UILabel!
+    @IBOutlet weak var elevatedSoftRoundView: UIView!
+    @IBOutlet weak var elevatedSoftRoundButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,7 @@ class ButtonsViewController: UIViewController {
         
         setupBackButton()
         setupDotView()
+        
         updateView(view: elevatedSoftView, label: elevatedSoftLabel, with: "ELEVATED SOFT")
         
         let textAttributes: [NSAttributedString.Key:Any] = [
@@ -42,6 +46,9 @@ class ButtonsViewController: UIViewController {
         ]
         elevatedSoftWithImageButton.applyNeuBtnStyle(type: .elevatedSoft, attributedTitle: NSAttributedString(string: "Idle now", attributes: textAttributes), image: UIImage(named: "plus"), imageDimension: 10)
         elevatedSoftButton.applyNeuBtnStyle(type: .elevatedSoft, attributedTitle: NSAttributedString(string: "Idle now", attributes: textAttributes))
+        
+        updateView(view: elevatedSoftRoundView, label: elevatedSoftRoundLabel, with: "ELEVATED SOFT ROUND")
+        elevatedSoftRoundButton.applyNeuBtnStyle(type: .elevatedSoftRound, image: UIImage(named: "back"), imageDimension: 18)
     }
     
     private func setupBackButton() {
