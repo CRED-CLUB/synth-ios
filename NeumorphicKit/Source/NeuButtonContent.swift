@@ -24,6 +24,7 @@ class NeuButtonContent: UIView {
     private var circleBlurAmount: CGFloat = 0
     private var stackContentPadding: CGFloat = 0
     private let defaultImageDimension: CGFloat = 20
+    private var hideImagePit: Bool = false
 
     /// Used to update content view when state changes
     var state: NeuConstants.NeuButtonState = .normal {
@@ -37,8 +38,9 @@ class NeuButtonContent: UIView {
     
     // MARK: Initializers
 
-    init(frame: CGRect, contentModel: NeuConstants.NeuButtonContentModel) {
+    init(frame: CGRect, contentModel: NeuConstants.NeuButtonContentModel, hideImagePit: Bool) {
         self.contentModel = contentModel
+        self.hideImagePit = hideImagePit
         super.init(frame: frame)
         setupViews()
     }
@@ -199,6 +201,8 @@ class NeuButtonContent: UIView {
     }
     
     private func updateCircleView() {
+
+        guard !hideImagePit else { return }
 
         guard let colors = state == .normal ? contentModel.normalCircleGradientColors : contentModel.highlightedCircleGradientColors else { return }
 

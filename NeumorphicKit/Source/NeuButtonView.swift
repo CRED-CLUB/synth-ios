@@ -21,6 +21,7 @@ class NeuButtonView: UIView {
     private var isHighlighted: Bool = false
     private var isEnabled: Bool = true
     private var hideBasePit: Bool = false
+    private var hideImagePit: Bool = false
     private var contentPadding: CGFloat = 0
 
     /// Used to get current button state
@@ -32,17 +33,19 @@ class NeuButtonView: UIView {
 
     // MARK: - init methods
 
-    init(frame: CGRect, type: NeuConstants.NeuButtonType, hideBasePit: Bool) {
+    init(frame: CGRect, type: NeuConstants.NeuButtonType, hideBasePit: Bool, hideImagePit: Bool) {
         self.type = type
         self.hideBasePit = hideBasePit
+        self.hideImagePit = hideImagePit
         super.init(frame: frame)
         preSetupConfiguration()
         setupViews()
     }
     
-    init(frame: CGRect, customModel: NeuConstants.NeuButtonCustomModel, hideBasePit: Bool) {
+    init(frame: CGRect, customModel: NeuConstants.NeuButtonCustomModel, hideBasePit: Bool, hideImagePit: Bool) {
         self.customModel = customModel
         self.hideBasePit = hideBasePit
+        self.hideImagePit = hideImagePit
         super.init(frame: frame)
         preSetupConfiguration()
         setupCustomViews()
@@ -116,7 +119,7 @@ class NeuButtonView: UIView {
 
         let contentModel = NeuUtils.getButtonContentModel(for: type)
         contentPadding = contentModel.contentPadding ?? contentPadding
-        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: contentModel)
+        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: contentModel, hideImagePit: hideImagePit)
         addSubview(buttonContent)
         
         hideBasePitIfNeeded()
@@ -135,7 +138,7 @@ class NeuButtonView: UIView {
 
         let buttonContentModel = customModel.buttonContentModel ?? NeuConstants.NeuButtonContentModel()
         contentPadding = buttonContentModel.contentPadding ?? contentPadding
-        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: buttonContentModel)
+        buttonContent = NeuButtonContent(frame: getContentBounds(bounds: bounds), contentModel: buttonContentModel, hideImagePit: hideImagePit)
         addSubview(buttonContent)
         
         hideBasePitIfNeeded()
