@@ -13,4 +13,10 @@ class ButtonsViewController: UIViewController {
     @IBAction func backButtonClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = AppConstants.baseColor
+    }
 }

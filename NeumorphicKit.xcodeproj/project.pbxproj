@@ -13,6 +13,7 @@
 		D215611325440D930025DE69 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D215611225440D930025DE69 /* ContentCell.xib */; };
 		D2156116254411980025DE69 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2156115254411980025DE69 /* ButtonsViewController.swift */; };
 		D2156119254411A30025DE69 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2156118254411A30025DE69 /* ButtonsViewController.xib */; };
+		D215611C254415400025DE69 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215611B254415400025DE69 /* AppConstants.swift */; };
 		D287D3D1252CA164005DA7DC /* NeumorphicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D298974A24929767003625A5 /* NeumorphicKit.framework */; };
 		D287D3D2252CA164005DA7DC /* NeumorphicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D298974A24929767003625A5 /* NeumorphicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D298974F24929767003625A5 /* NeumorphicKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D298974D24929767003625A5 /* NeumorphicKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +66,7 @@
 		D215611225440D930025DE69 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
 		D2156115254411980025DE69 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		D2156118254411A30025DE69 /* ButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
+		D215611B254415400025DE69 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		D298974A24929767003625A5 /* NeumorphicKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeumorphicKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D298974D24929767003625A5 /* NeumorphicKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeumorphicKit.h; sourceTree = "<group>"; };
 		D298974E24929767003625A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				D215610A254408F00025DE69 /* ViewControllers */,
 				D29897772492B85D003625A5 /* AppDelegate.swift */,
+				D215611B254415400025DE69 /* AppConstants.swift */,
 				D298977D2492B85D003625A5 /* Main.storyboard */,
 				D29897802492B85F003625A5 /* Assets.xcassets */,
 				D29897822492B85F003625A5 /* LaunchScreen.storyboard */,
@@ -344,6 +347,7 @@
 				D215610F25440D850025DE69 /* ContentCell.swift in Sources */,
 				D298977C2492B85D003625A5 /* ViewController.swift in Sources */,
 				D29897782492B85D003625A5 /* AppDelegate.swift in Sources */,
+				D215611C254415400025DE69 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
