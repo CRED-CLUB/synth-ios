@@ -14,18 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        return setRootViewController()
+        setRootViewController()
+        return true
     }
         
-    private func setRootViewController() -> Bool {
+    private func setRootViewController() {
         
-        guard let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
-            return false
-        }
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = rootViewController
+        self.window?.rootViewController = ViewController(nibName: "ViewController", bundle: nil)
         self.window?.makeKey()
-        return true
     }
 }
 

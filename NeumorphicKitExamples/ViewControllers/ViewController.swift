@@ -11,35 +11,44 @@ import NeumorphicKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var containerStackView: UIStackView!
-    @IBOutlet weak var neumorphicView: UIView!
-    @IBOutlet weak var neumorphicSoftButton: UIButton!
-    @IBOutlet weak var neumorphicRoundButton: UIButton!
-    @IBOutlet weak var neumorphicFlatButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
+    private let items = [
+        "buttons",
+        "gutter emboss",
+        "gutter deboss"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = NeuUtils.baseColor
-        containerStackView.setCustomSpacing(40, after: neumorphicView)
-        
-        setupTextAttributes()
-        
-        neumorphicView.layer.cornerRadius = 20
-        neumorphicView.applyNeuStyle()
-        
-        neumorphicSoftButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Soft Button")
-        neumorphicRoundButton.applyNeuBtnStyle(type: .elevatedSoftRound, image: UIImage(named: "back"), imageDimension: 15)
-        neumorphicFlatButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Flat Button")
+        view.backgroundColor = .white
+        setupTableView()
     }
     
-    private func setupTextAttributes() {
+    private func setupTableView() {
         
-        var attributes: [NSAttributedString.Key:Any] = [:]
-        attributes[.foregroundColor] = UIColor.white
-        attributes[.font] = UIFont.systemFont(ofSize: 15)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: ContentCell.identifier, bundle: nil), forCellReuseIdentifier: ContentCell.identifier)
+    }
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        NeuUtils.textAttributes = attributes
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ContentCell.identifier, for: indexPath) as? ContentCell else {
+            let cell = UITableViewCell(style: .default, reuseIdentifier: "UITableViewCell")
+            return cell
+        }
+        
+        cell.configure(with: items[indexPath.row])
+        return cell
     }
 }
 
