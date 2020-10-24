@@ -136,6 +136,7 @@ public struct NeuUtils {
             innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 4, yOffset: 6, blur: 20, spread: 0, color: .black, opacity: 1))
             model.highlightedInnerShadows = innerShadows
             model.contentPadding = 5
+            model.stackContentPadding = 0
         }
         
         return model
