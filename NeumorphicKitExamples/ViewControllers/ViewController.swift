@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        navigationController?.navigationBar.isHidden = true
         setupTableView()
     }
     
@@ -49,6 +50,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.configure(with: items[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let buttonsVC = ButtonsViewController(nibName: "ButtonsViewController", bundle: nil)
+            navigationController?.pushViewController(buttonsVC, animated: true)
+        default:
+            break
+        }
     }
 }
 

@@ -20,8 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     private func setRootViewController() {
         
+        let rootVC = ViewController(nibName: "ViewController", bundle: nil)
+        let navController = UINavigationController(rootViewController: rootVC)
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = ViewController(nibName: "ViewController", bundle: nil)
+        self.window?.rootViewController = navController
         self.window?.makeKey()
     }
 }
