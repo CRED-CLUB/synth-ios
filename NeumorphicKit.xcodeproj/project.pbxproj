@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21561042543FE450025DE69 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21561032543FE450025DE69 /* UIColor+Hex.swift */; };
+		D2156107254407E30025DE69 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2156106254407E20025DE69 /* ViewController.xib */; };
+		D287D3D1252CA164005DA7DC /* NeumorphicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D298974A24929767003625A5 /* NeumorphicKit.framework */; };
+		D287D3D2252CA164005DA7DC /* NeumorphicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D298974A24929767003625A5 /* NeumorphicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D298974F24929767003625A5 /* NeumorphicKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D298974D24929767003625A5 /* NeumorphicKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D298975E2492B328003625A5 /* NeuButtonContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897582492B328003625A5 /* NeuButtonContent.swift */; };
 		D298975F2492B328003625A5 /* NeuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29897592492B328003625A5 /* NeuConstants.swift */; };
@@ -26,7 +30,33 @@
 		D29897842492B85F003625A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29897822492B85F003625A5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D287D3D3252CA164005DA7DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D298974124929767003625A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D298974924929767003625A5;
+			remoteInfo = NeumorphicKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D287D3D5252CA164005DA7DC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D287D3D2252CA164005DA7DC /* NeumorphicKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D21561032543FE450025DE69 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		D2156106254407E20025DE69 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		D298974A24929767003625A5 /* NeumorphicKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeumorphicKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D298974D24929767003625A5 /* NeumorphicKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeumorphicKit.h; sourceTree = "<group>"; };
 		D298974E24929767003625A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,18 +92,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D287D3D1252CA164005DA7DC /* NeumorphicKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D215610A254408F00025DE69 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D298977B2492B85D003625A5 /* ViewController.swift */,
+				D2156106254407E20025DE69 /* ViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D287D3D0252CA164005DA7DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D298974024929767003625A5 = {
 			isa = PBXGroup;
 			children = (
 				D298974C24929767003625A5 /* NeumorphicKit */,
 				D29897762492B85D003625A5 /* NeumorphicKitExamples */,
 				D298974B24929767003625A5 /* Products */,
+				D287D3D0252CA164005DA7DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,8 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				D29897692492B350003625A5 /* CALayer+Shadow.swift */,
-				D29897672492B350003625A5 /* UIButton+Neu.swift */,
 				D29897682492B350003625A5 /* UIColor+NearColor.swift */,
+				D21561032543FE450025DE69 /* UIColor+Hex.swift */,
+				D29897672492B350003625A5 /* UIButton+Neu.swift */,
 				D29897662492B350003625A5 /* UIView+Blur.swift */,
 				D29897652492B350003625A5 /* UIView+Neu.swift */,
 			);
@@ -125,8 +174,8 @@
 		D29897762492B85D003625A5 /* NeumorphicKitExamples */ = {
 			isa = PBXGroup;
 			children = (
+				D215610A254408F00025DE69 /* ViewControllers */,
 				D29897772492B85D003625A5 /* AppDelegate.swift */,
-				D298977B2492B85D003625A5 /* ViewController.swift */,
 				D298977D2492B85D003625A5 /* Main.storyboard */,
 				D29897802492B85F003625A5 /* Assets.xcassets */,
 				D29897822492B85F003625A5 /* LaunchScreen.storyboard */,
@@ -174,10 +223,12 @@
 				D29897712492B85D003625A5 /* Sources */,
 				D29897722492B85D003625A5 /* Frameworks */,
 				D29897732492B85D003625A5 /* Resources */,
+				D287D3D5252CA164005DA7DC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D287D3D4252CA164005DA7DC /* PBXTargetDependency */,
 			);
 			name = NeumorphicKitExamples;
 			productName = NeumorphicKitExamples;
@@ -236,6 +287,7 @@
 			files = (
 				D29897842492B85F003625A5 /* LaunchScreen.storyboard in Resources */,
 				D29897812492B85F003625A5 /* Assets.xcassets in Resources */,
+				D2156107254407E30025DE69 /* ViewController.xib in Resources */,
 				D298977F2492B85D003625A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +308,7 @@
 				D298976D2492B350003625A5 /* UIColor+NearColor.swift in Sources */,
 				D29897612492B328003625A5 /* NeuUIHelper.swift in Sources */,
 				D298976B2492B350003625A5 /* UIView+Blur.swift in Sources */,
+				D21561042543FE450025DE69 /* UIColor+Hex.swift in Sources */,
 				D29897602492B328003625A5 /* NeuButtonView.swift in Sources */,
 				D298976A2492B350003625A5 /* UIView+Neu.swift in Sources */,
 			);
@@ -271,6 +324,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D287D3D4252CA164005DA7DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D298974924929767003625A5 /* NeumorphicKit */;
+			targetProxy = D287D3D3252CA164005DA7DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D298977D2492B85D003625A5 /* Main.storyboard */ = {
