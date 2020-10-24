@@ -10,7 +10,7 @@ import UIKit
 
 public struct NeuUtils {
 
-    private static var neuColor = UIColor(red: 33.0/255.0, green: 36.0/255.0, blue: 38.0/255.0, alpha: 1.0)
+    private static var neuColor = UIColor.fromHex("212426")
     private static var neuTextAttributes: [NSAttributedString.Key:Any] = [:]
 
     /// This baseColor is used to generate content gradient, shadows and borders. Changing this will update baseColor across NeumorphicUIKit
@@ -108,12 +108,12 @@ public struct NeuUtils {
             break
         case .elevatedFlat:
             model.normalShadowModel = NeuConstants.NeuShadowModel(xOffset: 1, yOffset: 2, blur: 15, spread: 0, color: .black, opacity: 0.45)
-            model.normalBgGradientColors = [UIColor(red: 66.0/255.0, green: 107.0/255.0, blue: 182.0/255.0, alpha: 1.0).cgColor, UIColor(red: 38.0/255.0, green: 69.0/255.0, blue: 140.0/255.0, alpha: 1.0).cgColor]
+            model.normalBgGradientColors = [UIColor.fromHex("426BB6").cgColor, UIColor.fromHex("26458C").cgColor]
             model.highlightedBgGradientColors = model.normalBgGradientColors
             
             var borderGradients: [NeuConstants.BorderGradientLayerModel] = []
-            borderGradients.append(NeuConstants.BorderGradientLayerModel(lightDirection: .base, colors: [UIColor(red: 86.0/255.0, green: 121.0/255.0, blue: 196.0/255.0, alpha: 1.0).cgColor, UIColor(red: 27.0/255.0, green: 45.0/255.0, blue: 91.0/255.0, alpha: 1.0).cgColor], borderWidth: 0.9))
-            borderGradients.append(NeuConstants.BorderGradientLayerModel(lightDirection: .base, colors: [UIColor(red: 54.0/255.0, green: 107.0/255.0, blue: 209.0/255.0, alpha: 1.0).cgColor, UIColor(red: 24.0/255.0, green: 38.0/255.0, blue: 62.0/255.0, alpha: 1.0).cgColor], borderWidth: 0.5))
+            borderGradients.append(NeuConstants.BorderGradientLayerModel(lightDirection: .base, colors: [UIColor.fromHex("5679C4").cgColor, UIColor.fromHex("1B2D5B").cgColor], borderWidth: 0.9))
+            borderGradients.append(NeuConstants.BorderGradientLayerModel(lightDirection: .base, colors: [UIColor.fromHex("366BD1").cgColor, UIColor.fromHex("18263E").cgColor], borderWidth: 0.5))
             model.normalBorderGradients = borderGradients
             
             var innerShadows: [NeuConstants.NeuShadowModel] = []
@@ -121,15 +121,15 @@ public struct NeuUtils {
             innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 3, yOffset: 4, blur: 8, spread: 0, color: .black, opacity: 1))
             model.highlightedInnerShadows = innerShadows
             
-            model.normalCircleGradientColors = [UIColor(red: 36.0/255.0, green: 62.0/255.0, blue: 120.0/255.0, alpha: 1.0).cgColor, UIColor(red: 73.0/255.0, green: 117.0/255.0, blue: 197.0/255.0, alpha: 1.0).cgColor]
+            model.normalCircleGradientColors = [UIColor.fromHex("243E78").cgColor, UIColor.fromHex("4975C5").cgColor]
             model.highlightedCircleGradientColors = model.normalCircleGradientColors
             model.circleBlurAmount = 3
             model.contentPadding = 4
             model.stackContentPadding = 4
         case .elevatedFlatRound:
             model.normalShadowModel = NeuConstants.NeuShadowModel(xOffset: 1, yOffset: 2, blur: 12, spread: 0, color: .black, opacity: 0.43)
-            model.normalBgGradientColors = [UIColor(red: 50.0/255.0, green: 54.0/255.0, blue: 55.0/255.0, alpha: 1.0).cgColor, UIColor(red: 22.0/255.0, green: 23.0/255.0, blue: 24.0/255.0, alpha: 1.0).cgColor]
-            model.highlightedBgGradientColors = [UIColor(red: 24.0/255.0, green: 26.0/255.0, blue: 27.0/255.0, alpha: 1.0).cgColor, UIColor(red: 56.0/255.0, green: 59.0/255.0, blue: 60.0/255.0, alpha: 1.0).cgColor]
+            model.normalBgGradientColors = [UIColor.fromHex("323637").cgColor, UIColor.fromHex("161718").cgColor]
+            model.highlightedBgGradientColors = [UIColor.fromHex("181A1B").cgColor, UIColor.fromHex("383B3C").cgColor]
             
             var innerShadows: [NeuConstants.NeuShadowModel] = []
             innerShadows.append(NeuConstants.NeuShadowModel(xOffset: 4, yOffset: 6, blur: 20, spread: 0, color: .black, opacity: 1))
