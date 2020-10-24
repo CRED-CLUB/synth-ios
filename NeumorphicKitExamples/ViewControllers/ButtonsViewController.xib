@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonsViewController" customModule="NeumorphicKitExamples" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="NLG-9g-KuV" id="4J4-Od-EhS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NLG-9g-KuV">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiS-j8-3gf">
+                    <rect key="frame" x="336" y="74" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="ATj-dO-0Y0"/>
+                        <constraint firstAttribute="width" secondItem="AiS-j8-3gf" secondAttribute="height" multiplier="1:1" id="uVe-je-Cfb"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                    <state key="normal" image="back"/>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="Gs4-gs-Gjf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fOM-BX-1wG"/>
+            <color key="backgroundColor" red="0.066666666669999999" green="0.078431372550000003" blue="0.10980392160000001" alpha="0.0" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="AiS-j8-3gf" firstAttribute="top" secondItem="fOM-BX-1wG" secondAttribute="top" constant="30" id="9rb-te-ZB0"/>
+                <constraint firstItem="fOM-BX-1wG" firstAttribute="trailing" secondItem="AiS-j8-3gf" secondAttribute="trailing" constant="30" id="EnG-wL-vCn"/>
+            </constraints>
+            <point key="canvasLocation" x="-172" y="-528"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="256" height="256"/>
+    </resources>
+</document>
