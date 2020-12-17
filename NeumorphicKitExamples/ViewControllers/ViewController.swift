@@ -57,6 +57,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             let buttonsVC = ButtonsViewController(nibName: "ButtonsViewController", bundle: nil)
             navigationController?.pushViewController(buttonsVC, animated: true)
+        case 1:
+            let gutterVC = GutterViewController(nibName: "GutterViewController", bundle: nil)
+            navigationController?.pushViewController(gutterVC, animated: true)
         default:
             break
         }
