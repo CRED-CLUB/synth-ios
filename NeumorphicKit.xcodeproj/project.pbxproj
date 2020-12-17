@@ -14,6 +14,10 @@
 		D2156116254411980025DE69 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2156115254411980025DE69 /* ButtonsViewController.swift */; };
 		D2156119254411A30025DE69 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2156118254411A30025DE69 /* ButtonsViewController.xib */; };
 		D215611C254415400025DE69 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215611B254415400025DE69 /* AppConstants.swift */; };
+		D25FDAAD258BD393003577AE /* GutterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25FDAAC258BD393003577AE /* GutterViewController.xib */; };
+		D25FDAB0258BD3A0003577AE /* GutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FDAAF258BD3A0003577AE /* GutterViewController.swift */; };
+		D25FDAB4258C0120003577AE /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FDAB3258C0120003577AE /* ColorCell.swift */; };
+		D25FDAB7258C012B003577AE /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25FDAB6258C012B003577AE /* ColorCell.xib */; };
 		D287D3D1252CA164005DA7DC /* NeumorphicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D298974A24929767003625A5 /* NeumorphicKit.framework */; };
 		D287D3D2252CA164005DA7DC /* NeumorphicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D298974A24929767003625A5 /* NeumorphicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D298974F24929767003625A5 /* NeumorphicKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D298974D24929767003625A5 /* NeumorphicKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,6 +71,10 @@
 		D2156115254411980025DE69 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		D2156118254411A30025DE69 /* ButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
 		D215611B254415400025DE69 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		D25FDAAC258BD393003577AE /* GutterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GutterViewController.xib; sourceTree = "<group>"; };
+		D25FDAAF258BD3A0003577AE /* GutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutterViewController.swift; sourceTree = "<group>"; };
+		D25FDAB3258C0120003577AE /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		D25FDAB6258C012B003577AE /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
 		D298974A24929767003625A5 /* NeumorphicKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeumorphicKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D298974D24929767003625A5 /* NeumorphicKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeumorphicKit.h; sourceTree = "<group>"; };
 		D298974E24929767003625A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +125,8 @@
 				D2156106254407E20025DE69 /* ViewController.xib */,
 				D2156115254411980025DE69 /* ButtonsViewController.swift */,
 				D2156118254411A30025DE69 /* ButtonsViewController.xib */,
+				D25FDAAF258BD3A0003577AE /* GutterViewController.swift */,
+				D25FDAAC258BD393003577AE /* GutterViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -126,6 +136,8 @@
 			children = (
 				D215610E25440D850025DE69 /* ContentCell.swift */,
 				D215611225440D930025DE69 /* ContentCell.xib */,
+				D25FDAB3258C0120003577AE /* ColorCell.swift */,
+				D25FDAB6258C012B003577AE /* ColorCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -311,7 +323,9 @@
 				D29897842492B85F003625A5 /* LaunchScreen.storyboard in Resources */,
 				D215611325440D930025DE69 /* ContentCell.xib in Resources */,
 				D29897812492B85F003625A5 /* Assets.xcassets in Resources */,
+				D25FDAAD258BD393003577AE /* GutterViewController.xib in Resources */,
 				D2156107254407E30025DE69 /* ViewController.xib in Resources */,
+				D25FDAB7258C012B003577AE /* ColorCell.xib in Resources */,
 				D2156119254411A30025DE69 /* ButtonsViewController.xib in Resources */,
 				D298977F2492B85D003625A5 /* Main.storyboard in Resources */,
 			);
@@ -345,7 +359,9 @@
 			files = (
 				D2156116254411980025DE69 /* ButtonsViewController.swift in Sources */,
 				D215610F25440D850025DE69 /* ContentCell.swift in Sources */,
+				D25FDAB4258C0120003577AE /* ColorCell.swift in Sources */,
 				D298977C2492B85D003625A5 /* ViewController.swift in Sources */,
+				D25FDAB0258BD3A0003577AE /* GutterViewController.swift in Sources */,
 				D29897782492B85D003625A5 /* AppDelegate.swift in Sources */,
 				D215611C254415400025DE69 /* AppConstants.swift in Sources */,
 			);
