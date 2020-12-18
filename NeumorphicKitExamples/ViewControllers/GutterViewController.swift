@@ -25,17 +25,19 @@ class GutterViewController: UIViewController {
     @IBOutlet weak var hexTextfield: UITextField!
     @IBOutlet weak var hexTextLineView: UIView!
     @IBOutlet weak var colorsCollectionView: UICollectionView!
+    @IBOutlet weak var collectionBottomConstraint: NSLayoutConstraint!
     
-    private var colors: [UIColor] = [
-        UIColor.fromHex("c17b5c", alpha: 0.9),
-        UIColor.fromHex("847182", alpha: 0.4),
-        UIColor.fromHex("5464b8", alpha: 0.4),
-        UIColor.fromHex("3eaa88", alpha: 0.4),
-        UIColor.fromHex("567173", alpha: 0.4),
+    private var hexColors = [
+        "c17b5c",
+        "847182",
+        "5464b8",
+        "3eaa88",
+        "567173",
     ]
     private var colorCellSpacing: CGFloat = 16
     private var selectedColorIndex = -1
-    
+    private var initialBottomConstant: CGFloat = 50
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -85,10 +87,38 @@ class GutterViewController: UIViewController {
         ]
         hexTextfield.typingAttributes = hexTextFieldAttributes
         hexTextfield.attributedText = NSAttributedString(string: "# 212426", attributes: hexTextFieldAttributes)
+        hexTextfield.delegate = self
+        hexTextfield.returnKeyType = .done
         
         colorsCollectionView.delegate = self
         colorsCollectionView.dataSource = self
         colorsCollectionView.register(UINib(nibName: ColorCell.identifier, bundle: nil), forCellWithReuseIdentifier: ColorCell.identifier)
+        
+        collectionBottomConstraint.constant = initialBottomConstant
+        registerNotifications()
+    }
+    
+    private func registerNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        
+        guard let userInfo = notification.userInfo, let rect = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect else { return }
+        collectionBottomConstraint.constant = rect.size.height
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        } completion: { success in
+            self.contentScrollView.setContentOffset(CGPoint(x: 0, y: self.contentScrollView.contentSize.height - self.contentScrollView.bounds.height), animated: true)
+        }
+    }
+    
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        collectionBottomConstraint.constant = initialBottomConstant
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     private func setupBackButton() {
@@ -143,7 +173,7 @@ extension GutterViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let screenWidth = UIScreen.main.bounds.width
-        let itemsWidth = ColorCell.itemSize.width * CGFloat(colors.count) + colorCellSpacing * CGFloat(colors.count - 1)
+        let itemsWidth = ColorCell.itemSize.width * CGFloat(hexColors.count) + colorCellSpacing * CGFloat(hexColors.count - 1)
         let horizontalInset = (screenWidth - itemsWidth)/2
         return UIEdgeInsets(top: 0, left: horizontalInset, bottom: 0, right: horizontalInset)
     }
@@ -151,15 +181,16 @@ extension GutterViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedColorIndex = indexPath.item
         colorsCollectionView.reloadData()
+        hexTextfield.resignFirstResponder()
         
-        embossView.applyNeuStyle(model: NeuConstants.NeuViewModel(baseColor: colors[indexPath.item]))
+        embossView.applyNeuStyle(model: NeuConstants.NeuViewModel(baseColor: UIColor.fromHex(hexColors[indexPath.item])))
     }
 }
 
 extension GutterViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return hexColors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -167,7 +198,15 @@ extension GutterViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColorCell.identifier, for: indexPath) as? ColorCell else {
             return UICollectionViewCell(frame: .zero)
         }
-        cell.configure(color: colors[indexPath.item], isSelected: indexPath.item == selectedColorIndex)
+        cell.configure(hexColor: hexColors[indexPath.item], isSelected: indexPath.item == selectedColorIndex)
         return cell
+    }
+}
+
+extension GutterViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

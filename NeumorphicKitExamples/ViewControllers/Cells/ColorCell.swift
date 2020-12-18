@@ -21,8 +21,8 @@ class ColorCell: UICollectionViewCell {
         setupViews()
     }
     
-    func configure(color: UIColor, isSelected: Bool) {
-        colorView.backgroundColor = color
+    func configure(hexColor: String, isSelected: Bool) {
+        colorView.backgroundColor = UIColor.fromHex(hexColor)
         bgView.isHidden = !isSelected
     }
     

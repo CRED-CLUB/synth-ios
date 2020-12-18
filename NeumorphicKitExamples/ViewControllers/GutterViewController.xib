@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GutterViewController" customModule="NeumorphicKitExamples" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="BG9-G6-977" id="Djg-yO-PdC"/>
+                <outlet property="collectionBottomConstraint" destination="FlS-Kt-f1m" id="hK1-Kk-4M6"/>
                 <outlet property="colorsCollectionView" destination="zVZ-8i-VTY" id="7GW-op-QJN"/>
                 <outlet property="contentScrollView" destination="vMK-UI-yya" id="Qmj-qm-ljz"/>
                 <outlet property="debossView" destination="rcv-c3-jRH" id="Gw3-6D-paa"/>
