@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NeumorphicKit
 
 class GutterViewController: UIViewController {
     
@@ -150,6 +151,8 @@ extension GutterViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedColorIndex = indexPath.item
         colorsCollectionView.reloadData()
+        
+        embossView.applyNeuStyle(model: NeuConstants.NeuViewModel(baseColor: colors[indexPath.item]))
     }
 }
 
