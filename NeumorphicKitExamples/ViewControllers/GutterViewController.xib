@@ -38,7 +38,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="796"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rf-je-oR9">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="841"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="850.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMY-aj-o0H">
                                     <rect key="frame" x="0.0" y="40" width="414" height="40"/>
@@ -137,7 +137,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-50-OAx">
-                                    <rect key="frame" x="0.0" y="567.5" width="414" height="273.5"/>
+                                    <rect key="frame" x="0.0" y="567.5" width="414" height="283"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI7-oB-SbV">
                                             <rect key="frame" x="186" y="60" width="42" height="21"/>
@@ -145,20 +145,23 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-Nc-bWW">
-                                            <rect key="frame" x="205" y="101" width="4" height="18.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-Nc-bWW">
+                                            <rect key="frame" x="204.5" y="101" width="5" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="oQB-HV-y8v"/>
+                                            </constraints>
+                                            <attributedString key="attributedText"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGW-w0-KNi">
-                                            <rect key="frame" x="205" y="126.5" width="4" height="1"/>
+                                            <rect key="frame" x="204.5" y="136" width="5" height="1"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="s4W-cz-jPy"/>
                                             </constraints>
                                         </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zVZ-8i-VTY">
-                                            <rect key="frame" x="0.0" y="177.5" width="414" height="46"/>
+                                            <rect key="frame" x="0.0" y="187" width="414" height="46"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="46" id="cge-tm-qtC"/>

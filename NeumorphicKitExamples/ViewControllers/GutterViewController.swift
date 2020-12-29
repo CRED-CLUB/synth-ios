@@ -27,6 +27,8 @@ class GutterViewController: UIViewController {
     @IBOutlet weak var colorsCollectionView: UICollectionView!
     @IBOutlet weak var collectionBottomConstraint: NSLayoutConstraint!
     
+    private var hexPrefixLabel: UILabel?
+
     private var hexColors = [
         "c17b5c",
         "847182",
@@ -70,7 +72,7 @@ class GutterViewController: UIViewController {
         embossView.applyNeuStyle()
         
         debossView.layer.cornerRadius = 14
-        debossView.applyNeuStyle()
+        debossView.applyNeuStyle(model: NeuUIHelper.getDebossModel())
         
         let hexTextAttributes: [NSAttributedString.Key:Any] = [
             .foregroundColor: UIColor.white.withAlphaComponent(0.5),
@@ -80,15 +82,15 @@ class GutterViewController: UIViewController {
         hexLabel.attributedText = NSAttributedString(string: "BACKGROUD COLOUR HEX CODE", attributes: hexTextAttributes)
         hexTextLineView.backgroundColor = UIColor.white.withAlphaComponent(0.15)
         
-        let hexTextFieldAttributes: [NSAttributedString.Key:Any] = [
-            .foregroundColor: UIColor(red: 248.0/255.0, green: 248.0/255.0, blue: 248.0/255.0, alpha: 0.8),
-            .kern: 1.2,
-            .font: UIFont.systemFont(ofSize: 30, weight: .bold)
-        ]
-        hexTextfield.typingAttributes = hexTextFieldAttributes
-        hexTextfield.attributedText = NSAttributedString(string: "# 212426", attributes: hexTextFieldAttributes)
+        hexPrefixLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: hexTextfield.bounds.height))
+        hexPrefixLabel?.attributedText = NSAttributedString(string: "# ", attributes: getTextfieldAttributes())
+        
+        hexTextfield.typingAttributes = getTextfieldAttributes()
+        hexTextfield.attributedText = NSAttributedString(string: "212426", attributes: getTextfieldAttributes())
         hexTextfield.delegate = self
         hexTextfield.returnKeyType = .done
+        hexTextfield.leftView = hexPrefixLabel
+        hexTextfield.leftViewMode = .always
         
         colorsCollectionView.delegate = self
         colorsCollectionView.dataSource = self
@@ -152,6 +154,14 @@ class GutterViewController: UIViewController {
         view.backgroundColor = UIColor.white.withAlphaComponent(0.5)
     }
     
+    private func getTextfieldAttributes() -> [NSAttributedString.Key:Any] {
+        return [
+            .foregroundColor: UIColor(red: 248.0/255.0, green: 248.0/255.0, blue: 248.0/255.0, alpha: 0.8),
+            .kern: 1.2,
+            .font: UIFont.systemFont(ofSize: 30, weight: .bold)
+        ]
+    }
+    
     @objc private func backButtonClicked() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -184,6 +194,7 @@ extension GutterViewController: UICollectionViewDelegateFlowLayout {
         hexTextfield.resignFirstResponder()
         
         embossView.applyNeuStyle(model: NeuConstants.NeuViewModel(baseColor: UIColor.fromHex(hexColors[indexPath.item])))
+        debossView.applyNeuStyle(model: NeuUIHelper.getDebossModel(baseColor: UIColor.fromHex(hexColors[indexPath.item])))
     }
 }
 
@@ -208,5 +219,18 @@ extension GutterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard !string.isEmpty else { return true }
+        guard let text = textField.attributedText?.string, let textRange = Range(range, in: text) else { return true }
+        
+        let newText = text.replacingCharacters(in: textRange, with: string)
+        
+        guard newText.count <= 6 else { return false }
+        
+        hexTextfield.attributedText = NSAttributedString(string: newText, attributes: getTextfieldAttributes())
+        return false
     }
 }
