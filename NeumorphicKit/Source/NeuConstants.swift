@@ -44,6 +44,7 @@ public struct NeuConstants {
         case elevatedSoft = "elevated_soft" // embossed button
         case elevatedSoftRound = "elevated_soft_round"  // round embossed button
         case elevatedFlat = "elevated_flat" // flat embossed button
+        case elevatedFlatRound = "elevated_flat_round" // round flat embossed button
     }
 
     /// Defines button states
@@ -146,7 +147,10 @@ public struct NeuConstants {
         public var highlightedInnerShadows: [NeuShadowModel]?
         public var normalCircleGradientColors: [CGColor]?
         public var highlightedCircleGradientColors: [CGColor]?
-        
+        public var circleBlurAmount: CGFloat?
+        public var contentPadding: CGFloat?
+        public var stackContentPadding: CGFloat?
+
         public init() {
             self.lightDirection = .base
         }
@@ -167,11 +171,13 @@ public struct NeuConstants {
         public var baseModel: NeuButtonModel?
         public var innerModel: NeuViewModel?
         public var buttonContentModel: NeuButtonContentModel?
+        public var contentPadding: CGFloat?
         
         public init() {
             self.baseModel = NeuButtonModel()
             self.innerModel = nil
             self.buttonContentModel = NeuButtonContentModel()
+            self.contentPadding = 5
         }
     }
 }

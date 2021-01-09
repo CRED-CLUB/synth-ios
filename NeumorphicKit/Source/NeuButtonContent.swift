@@ -29,9 +29,12 @@ class NeuButtonContent: UIView {
     private var titleLabel: UILabel!
     private var imageDimensionConstraint: NSLayoutConstraint!
     
-    private let circleBlurAmount: CGFloat = 3
-    private let defaultImageDimension: CGFloat = 20
     private var contentModel: NeuConstants.NeuButtonContentModel!
+
+    private var circleBlurAmount: CGFloat = 0
+    private var stackContentPadding: CGFloat = 0
+    private let defaultImageDimension: CGFloat = 20
+    private var hideImagePit: Bool = false
 
     /// Used to update content view when state changes
     var state: NeuConstants.NeuButtonState = .normal {
@@ -45,8 +48,9 @@ class NeuButtonContent: UIView {
     
     // MARK: Initializers
 
-    init(frame: CGRect, contentModel: NeuConstants.NeuButtonContentModel) {
+    init(frame: CGRect, contentModel: NeuConstants.NeuButtonContentModel, hideImagePit: Bool) {
         self.contentModel = contentModel
+        self.hideImagePit = hideImagePit
         super.init(frame: frame)
         setupViews()
     }
@@ -62,7 +66,7 @@ class NeuButtonContent: UIView {
     func resizeContentView(to bounds: CGRect) {
         frame = bounds
         contentView.frame = self.bounds
-        contentStackView.frame = self.bounds
+        contentStackView.frame = self.bounds.insetBy(dx: stackContentPadding, dy: stackContentPadding)
         updateContentView()
     }
 
@@ -96,12 +100,15 @@ class NeuButtonContent: UIView {
     
     private func setupViews() {
         
+        circleBlurAmount = contentModel.circleBlurAmount ?? circleBlurAmount
+        stackContentPadding = contentModel.stackContentPadding ?? stackContentPadding
+        
         layer.cornerRadius = bounds.height/2
         
         contentView = UIView(frame: bounds)
         addSubview(contentView)
         
-        contentStackView = UIStackView(frame: bounds)
+        contentStackView = UIStackView(frame: bounds.insetBy(dx: stackContentPadding, dy: stackContentPadding))
         addSubview(contentStackView)
         
         contentStackView.axis = .horizontal
@@ -204,6 +211,8 @@ class NeuButtonContent: UIView {
     }
     
     private func updateCircleView() {
+
+        guard !hideImagePit else { return }
 
         guard let colors = state == .normal ? contentModel.normalCircleGradientColors : contentModel.highlightedCircleGradientColors else { return }
 

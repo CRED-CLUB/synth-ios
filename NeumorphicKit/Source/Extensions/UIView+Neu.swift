@@ -35,6 +35,8 @@ public extension UIView {
                 self?.neuViewDataHolder?.neuView?.resizeContentView(to: change.newValue ?? CGRect.zero)
             }
             neuViewDataHolder = NeuViewDataHolder(neuView: neuView, boundsObserver: boundsObserver)
+        } else {
+            neuViewDataHolder?.neuView?.configure(with: model)
         }
 
         if let neuView = neuViewDataHolder?.neuView, !neuView.isDescendant(of: self) {

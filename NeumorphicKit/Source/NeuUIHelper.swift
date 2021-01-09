@@ -79,6 +79,17 @@ public struct NeuUIHelper {
         return borderGradientLayer
     }
     
+    public static func getDebossModel(baseColor: UIColor = NeuUtils.baseColor) -> NeuConstants.NeuViewModel {
+        var neuModel = NeuConstants.NeuViewModel(baseColor: baseColor, isRectangle: true)
+        neuModel.blurAmount = 0
+        neuModel.borderGradientColors = [UIColor.clear.cgColor, UIColor.clear.cgColor]
+        neuModel.shadowType = .outer
+        neuModel.borderGradientWidth = 10.0
+        neuModel.lightShadowModel = NeuConstants.NeuShadowModel(xOffset: 0, yOffset: 4, blur: 7, spread: 0, color: UIColor.black, opacity: 0.4)
+        neuModel.darkShadowModel = NeuConstants.NeuShadowModel(xOffset: -2, yOffset: -2, blur: 6, spread: 0, color: UIColor.white.withAlphaComponent(0.2), opacity: 0.4)
+        return neuModel
+    }
+    
     /// Remove subviews from a view
     static func removeAllSubViews(view: UIView) {
         if view.subviews.count > 0 {
