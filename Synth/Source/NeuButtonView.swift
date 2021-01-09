@@ -1,6 +1,6 @@
 //
 //  NeuButton.swift
-//  NeumorphicKit
+//  Synth
 //
 //  Copyright 2020 Dreamplug Technologies Private Limited
 //

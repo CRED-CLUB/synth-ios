@@ -1,6 +1,6 @@
 //
 //  GutterViewController.swift
-//  NeumorphicKitExamples
+//  SynthExamples
 //
 //  Copyright 2020 Dreamplug Technologies Private Limited
 //
