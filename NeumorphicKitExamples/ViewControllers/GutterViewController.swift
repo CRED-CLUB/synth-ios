@@ -2,8 +2,7 @@
 //  GutterViewController.swift
 //  NeumorphicKitExamples
 //
-//  Created by Prashant Shrivastava on 17/12/20.
-//  Copyright © 2020 CRED. All rights reserved.
+//  Copyright 2020 Dreamplug Technologies Private Limited
 //
 
 import UIKit
