@@ -11,58 +11,26 @@ import NeumorphicKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    
-    private let items = [
-        "buttons",
-        "gutter emboss",
-        "gutter deboss"
-    ]
+    @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
-        setupTableView()
+        
+        view.backgroundColor = NeuUtils.baseColor
+        
+        containerView.layer.cornerRadius = 20
+        containerView.applyNeuStyle()
     }
     
-    private func setupTableView() {
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: ContentCell.identifier, bundle: nil), forCellReuseIdentifier: ContentCell.identifier)
+    @IBAction func exploreButtonsClicked(_ sender: UIButton) {
+        let buttonsVC = ButtonsViewController(nibName: "ButtonsViewController", bundle: nil)
+        navigationController?.pushViewController(buttonsVC, animated: true)
+    }
+    
+    @IBAction func exploreGutterClicked(_ sender: UIButton) {
+        let gutterVC = GutterViewController(nibName: "GutterViewController", bundle: nil)
+        navigationController?.pushViewController(gutterVC, animated: true)
     }
 }
-
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ContentCell.identifier, for: indexPath) as? ContentCell else {
-            let cell = UITableViewCell(style: .default, reuseIdentifier: "UITableViewCell")
-            return cell
-        }
-        
-        cell.configure(with: items[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            let buttonsVC = ButtonsViewController(nibName: "ButtonsViewController", bundle: nil)
-            navigationController?.pushViewController(buttonsVC, animated: true)
-        case 1:
-            let gutterVC = GutterViewController(nibName: "GutterViewController", bundle: nil)
-            navigationController?.pushViewController(gutterVC, animated: true)
-        default:
-            break
-        }
-    }
-}
-

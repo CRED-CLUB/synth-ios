@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="NeumorphicKitExamples" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="IUT-Xu-ySy" id="h59-L1-e0u"/>
+                <outlet property="containerView" destination="2ny-zd-883" id="RCa-6p-6iC"/>
                 <outlet property="view" destination="Sj3-6u-oOI" id="lcl-Or-IpG"/>
             </connections>
         </placeholder>
@@ -19,21 +19,62 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Xu-ySy">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="synth" translatesAutoresizingMaskIntoConstraints="NO" id="sN5-iC-GMr">
+                    <rect key="frame" x="0.0" y="144" width="414" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="pjl-Dj-bpr"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ny-zd-883">
+                    <rect key="frame" x="20" y="284" width="374" height="489.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiZ-TM-QRp">
+                            <rect key="frame" x="10" y="10" width="354" height="230"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="DiZ-TM-QRp" secondAttribute="height" multiplier="1.54" id="W4K-Yc-P61"/>
+                            </constraints>
+                            <state key="normal" image="explore_buttons"/>
+                            <connections>
+                                <action selector="exploreButtonsClicked:" destination="-1" eventType="touchUpInside" id="Kcx-L2-Y3m"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9n-IU-vBh">
+                            <rect key="frame" x="10" y="250" width="354" height="229.5"/>
+                            <state key="normal" image="explore_gutter"/>
+                            <connections>
+                                <action selector="exploreGutterClicked:" destination="-1" eventType="touchUpInside" id="jhc-KS-kQj"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
+                    <constraints>
+                        <constraint firstItem="DiZ-TM-QRp" firstAttribute="top" secondItem="2ny-zd-883" secondAttribute="top" constant="10" id="F2d-fb-1n3"/>
+                        <constraint firstAttribute="bottom" secondItem="r9n-IU-vBh" secondAttribute="bottom" constant="10" id="FRy-Su-VAG"/>
+                        <constraint firstItem="DiZ-TM-QRp" firstAttribute="leading" secondItem="2ny-zd-883" secondAttribute="leading" constant="10" id="HHp-o5-V4b"/>
+                        <constraint firstAttribute="trailing" secondItem="DiZ-TM-QRp" secondAttribute="trailing" constant="10" id="IUp-57-a2Q"/>
+                        <constraint firstItem="r9n-IU-vBh" firstAttribute="top" secondItem="DiZ-TM-QRp" secondAttribute="bottom" constant="10" id="Owc-11-CsI"/>
+                        <constraint firstItem="r9n-IU-vBh" firstAttribute="width" secondItem="r9n-IU-vBh" secondAttribute="height" multiplier="1.54" id="eXf-kc-Sqo"/>
+                        <constraint firstAttribute="trailing" secondItem="r9n-IU-vBh" secondAttribute="trailing" constant="10" id="fwt-BI-iAM"/>
+                        <constraint firstItem="r9n-IU-vBh" firstAttribute="leading" secondItem="2ny-zd-883" secondAttribute="leading" constant="10" id="wCD-NW-aOh"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VYS-0p-46E"/>
             <color key="backgroundColor" red="0.066666666669999999" green="0.078431372550000003" blue="0.10980392160000001" alpha="0.0" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="IUT-Xu-ySy" firstAttribute="top" secondItem="VYS-0p-46E" secondAttribute="top" id="QXq-Kn-WTV"/>
-                <constraint firstItem="IUT-Xu-ySy" firstAttribute="leading" secondItem="VYS-0p-46E" secondAttribute="leading" id="Uih-DR-9Y7"/>
-                <constraint firstItem="VYS-0p-46E" firstAttribute="bottom" secondItem="IUT-Xu-ySy" secondAttribute="bottom" id="eQw-Mo-JGy"/>
-                <constraint firstItem="VYS-0p-46E" firstAttribute="trailing" secondItem="IUT-Xu-ySy" secondAttribute="trailing" id="wo3-ql-PrJ"/>
+                <constraint firstItem="sN5-iC-GMr" firstAttribute="top" secondItem="VYS-0p-46E" secondAttribute="top" constant="100" id="3pJ-Kx-GAA"/>
+                <constraint firstItem="VYS-0p-46E" firstAttribute="trailing" secondItem="2ny-zd-883" secondAttribute="trailing" constant="20" id="5Wa-rA-Rbd"/>
+                <constraint firstItem="2ny-zd-883" firstAttribute="leading" secondItem="VYS-0p-46E" secondAttribute="leading" constant="20" id="A6Y-bK-zqO"/>
+                <constraint firstItem="VYS-0p-46E" firstAttribute="trailing" secondItem="sN5-iC-GMr" secondAttribute="trailing" id="SrL-l2-hO3"/>
+                <constraint firstItem="2ny-zd-883" firstAttribute="top" secondItem="sN5-iC-GMr" secondAttribute="bottom" constant="60" id="b8x-qm-V69"/>
+                <constraint firstItem="sN5-iC-GMr" firstAttribute="leading" secondItem="VYS-0p-46E" secondAttribute="leading" id="fVb-50-8Aj"/>
             </constraints>
             <point key="canvasLocation" x="-172" y="-528"/>
         </view>
     </objects>
+    <resources>
+        <image name="explore_buttons" width="708" height="460"/>
+        <image name="explore_gutter" width="708" height="460"/>
+        <image name="synth" width="302" height="218"/>
+    </resources>
 </document>
