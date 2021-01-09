@@ -32,6 +32,7 @@
 		D298977F2492B85D003625A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D298977D2492B85D003625A5 /* Main.storyboard */; };
 		D29897812492B85F003625A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29897802492B85F003625A5 /* Assets.xcassets */; };
 		D29897842492B85F003625A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29897822492B85F003625A5 /* LaunchScreen.storyboard */; };
+		D2C5D33525A9BF2B00956841 /* Synth.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D2C5D33425A9BF2B00956841 /* Synth.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		D29897802492B85F003625A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D29897832492B85F003625A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D29897852492B85F003625A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C5D33425A9BF2B00956841 /* Synth.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synth.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		D298974024929767003625A5 = {
 			isa = PBXGroup;
 			children = (
+				D2C5D33325A9BF1500956841 /* Podspec Metadata */,
 				D298974C24929767003625A5 /* Synth */,
 				D29897762492B85D003625A5 /* SynthExamples */,
 				D298974B24929767003625A5 /* Products */,
@@ -194,6 +197,14 @@
 				D29897852492B85F003625A5 /* Info.plist */,
 			);
 			path = SynthExamples;
+			sourceTree = "<group>";
+		};
+		D2C5D33325A9BF1500956841 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				D2C5D33425A9BF2B00956841 /* Synth.podspec */,
+			);
+			path = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C5D33525A9BF2B00956841 /* Synth.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
