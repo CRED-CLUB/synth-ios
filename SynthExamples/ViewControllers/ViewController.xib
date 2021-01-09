@@ -19,6 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiber_left" translatesAutoresizingMaskIntoConstraints="NO" id="BSX-PC-zvr">
+                    <rect key="frame" x="294" y="44" width="120" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="UdE-L1-sOc"/>
+                        <constraint firstAttribute="width" constant="120" id="qOA-ah-OwA"/>
+                    </constraints>
+                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="synth" translatesAutoresizingMaskIntoConstraints="NO" id="sN5-iC-GMr">
                     <rect key="frame" x="0.0" y="144" width="414" height="80"/>
                     <constraints>
@@ -64,8 +71,10 @@
             <constraints>
                 <constraint firstItem="sN5-iC-GMr" firstAttribute="top" secondItem="VYS-0p-46E" secondAttribute="top" constant="100" id="3pJ-Kx-GAA"/>
                 <constraint firstItem="VYS-0p-46E" firstAttribute="trailing" secondItem="2ny-zd-883" secondAttribute="trailing" constant="20" id="5Wa-rA-Rbd"/>
+                <constraint firstItem="VYS-0p-46E" firstAttribute="trailing" secondItem="BSX-PC-zvr" secondAttribute="trailing" id="7jE-VU-IRF"/>
                 <constraint firstItem="2ny-zd-883" firstAttribute="leading" secondItem="VYS-0p-46E" secondAttribute="leading" constant="20" id="A6Y-bK-zqO"/>
                 <constraint firstItem="VYS-0p-46E" firstAttribute="trailing" secondItem="sN5-iC-GMr" secondAttribute="trailing" id="SrL-l2-hO3"/>
+                <constraint firstItem="BSX-PC-zvr" firstAttribute="top" secondItem="VYS-0p-46E" secondAttribute="top" id="aFA-5A-yRb"/>
                 <constraint firstItem="2ny-zd-883" firstAttribute="top" secondItem="sN5-iC-GMr" secondAttribute="bottom" constant="60" id="b8x-qm-V69"/>
                 <constraint firstItem="sN5-iC-GMr" firstAttribute="leading" secondItem="VYS-0p-46E" secondAttribute="leading" id="fVb-50-8Aj"/>
             </constraints>
@@ -75,6 +84,7 @@
     <resources>
         <image name="explore_buttons" width="708" height="460"/>
         <image name="explore_gutter" width="708" height="460"/>
+        <image name="fiber_left" width="266" height="198"/>
         <image name="synth" width="302" height="218"/>
     </resources>
 </document>

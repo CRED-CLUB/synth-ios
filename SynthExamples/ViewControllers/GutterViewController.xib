@@ -8,9 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GutterViewController" customModule="NeumorphicKitExamples" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GutterViewController" customModule="SynthExamples" customModuleProvider="target">
             <connections>
-                <outlet property="backButton" destination="BG9-G6-977" id="Djg-yO-PdC"/>
                 <outlet property="contentScrollView" destination="vMK-UI-yya" id="Qmj-qm-ljz"/>
                 <outlet property="debossView" destination="rcv-c3-jRH" id="Gw3-6D-paa"/>
                 <outlet property="embossView" destination="CF3-xH-1nm" id="mlD-K2-Arx"/>
@@ -118,8 +117,10 @@
                         <constraint firstAttribute="width" constant="48" id="0p6-cF-VEr"/>
                         <constraint firstAttribute="width" secondItem="BG9-G6-977" secondAttribute="height" multiplier="1:1" id="sYq-81-AdR"/>
                     </constraints>
-                    <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
-                    <state key="normal" image="back"/>
+                    <state key="normal" image="cross"/>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="aGm-a5-pJh"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="YCD-DQ-yNH"/>
@@ -137,7 +138,7 @@
         </view>
     </objects>
     <resources>
-        <image name="back" width="256" height="256"/>
+        <image name="cross" width="96" height="96"/>
         <image name="emboss_deboss_text" width="149" height="20"/>
         <image name="gutter_text" width="298" height="148"/>
     </resources>

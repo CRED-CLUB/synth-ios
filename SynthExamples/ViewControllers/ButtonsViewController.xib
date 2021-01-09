@@ -8,9 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonsViewController" customModule="NeumorphicKitExamples" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonsViewController" customModule="SynthExamples" customModuleProvider="target">
             <connections>
-                <outlet property="backButton" destination="AiS-j8-3gf" id="CVY-Pw-GNe"/>
                 <outlet property="contentScrollView" destination="sJe-kM-D3a" id="udt-SR-BFK"/>
                 <outlet property="elevatedFlatButton" destination="cad-LB-QhR" id="9Op-Ly-M8v"/>
                 <outlet property="elevatedFlatRoundButton" destination="PUc-dN-Phw" id="EEw-5l-JvP"/>
@@ -199,8 +198,10 @@
                         <constraint firstAttribute="width" constant="48" id="ATj-dO-0Y0"/>
                         <constraint firstAttribute="width" secondItem="AiS-j8-3gf" secondAttribute="height" multiplier="1:1" id="uVe-je-Cfb"/>
                     </constraints>
-                    <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
-                    <state key="normal" image="back"/>
+                    <state key="normal" image="cross"/>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="Ylj-xE-Zfi"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="FPL-Hw-5NR"/>
@@ -218,8 +219,8 @@
         </view>
     </objects>
     <resources>
-        <image name="back" width="256" height="256"/>
         <image name="buttons_text" width="366" height="148"/>
+        <image name="cross" width="96" height="96"/>
         <image name="type_1_text" width="58" height="20"/>
         <image name="type_2_text" width="60" height="20"/>
         <image name="type_3_text" width="60" height="20"/>

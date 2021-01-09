@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import NeumorphicKit
+import Synth
 
 class ViewController: UIViewController {
 
