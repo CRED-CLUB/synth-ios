@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NeumorphicKit
 
 class ButtonsViewController: UIViewController {
     
@@ -25,13 +26,14 @@ class ButtonsViewController: UIViewController {
     
     private func setupViews() {
         
-        view.backgroundColor = AppConstants.baseColor
+        view.backgroundColor = NeuUtils.baseColor
         contentScrollView.delaysContentTouches = false
         
         setupBackButton()
         
+        let textColor = UIColor(red: 249.0/255.0, green: 211.0/255.0, blue: 180.0/255.0, alpha: 0.9)
         let textAttributes: [NSAttributedString.Key:Any] = [
-            .foregroundColor: AppConstants.textColor.withAlphaComponent(0.9),
+            .foregroundColor: textColor,
             .kern: 0.65,
             .font: UIFont.systemFont(ofSize: 14, weight: .semibold)
         ]

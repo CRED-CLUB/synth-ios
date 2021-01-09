@@ -24,7 +24,7 @@ class GutterViewController: UIViewController {
     
     private func setupViews() {
         
-        view.backgroundColor = AppConstants.baseColor
+        view.backgroundColor = NeuUtils.baseColor
         contentScrollView.delaysContentTouches = false
         
         setupBackButton()
