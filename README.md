@@ -1,4 +1,4 @@
-# NeumorphicKit
+# synth
 A framework designed over neumorphic style. Provides an extension over UIKit elements `UIView` and `UIButton`.
 
 ## Installation
