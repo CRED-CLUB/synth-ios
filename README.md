@@ -15,7 +15,7 @@ pod 'synth-ios'
 
 ## Usage
 
-## `Embossed` and `Debossed` views
+### `Embossed` and `Debossed` views
 
 ![Embossed and Debossed Views](https://i.imgur.com/uqfvPE9.png "Embossed and Debossed Views")
 
