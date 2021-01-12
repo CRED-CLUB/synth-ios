@@ -57,18 +57,72 @@ all colors are by default derived from base color. You can explictly pass differ
 | `hideDarkShadow` | hides bottom shadow | Bool |
 | `hideBorder` | hides outer border | Bool |
 
-There are three styles which can be applied over `UIButton`:
+# buttons
+
+There are by default four styles which can be applied over `UIButton`:
 ```swift
 elevatedSoft // an embossed button
 elevatedSoftRound // a round embossed button
 elevatedFlat // flat button
+elevatedFlatRound // flat button
 ```
 
-Pass button style and text configuration to transform it to neumorphic
+## elevated soft button
+
+![Elevated Soft Button](https://i.imgur.com/HT0L6JT.png "Elevated Soft Button")
+
 ```swift
-let neumorphicButton = UIButton()
-neumorphicButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Soft Button")
+let softButton = UIButton()
+softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle")
 ```
+
+![Elevated Soft with image Button](https://i.imgur.com/1vc67oB.png "Elevated Soft with image Button")
+you can also add an image aligned left to this image. synth will render a neumorphic pit on which the image is rendered.
+```swift
+softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
+```
+
+## elevated soft round button
+
+![elevated soft round button](https://i.imgur.com/igONywf.png "elevated soft round button")
+
+```swift
+let roundButton = UIButton()
+roundButton.applyNeuBtnStyle(type: .elevatedSoftRound, image: UIImage(named: "plus"))
+```
+
+## elevated flat button
+
+![Elevated Flat Button](https://i.imgur.com/yWlyeyK.png "Flat Button")
+
+Elevated flat button renders a flat surface on top of the elevated neumorphic platform. this flat surface can be customized in two ways:
+```swift
+let flatButton = UIButton()
+flatButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Idle")
+```
+
+## elevated flat round button
+
+![Elevated Flat Round Button](https://i.imgur.com/yWlyeyK.png "Elevated Flat Round Button")
+
+```swift
+let flatButton = UIButton()
+flatButton.applyNeuBtnStyle(type: .elevatedFlatRound, title: "Spin")
+```
+
+## all button attributes
+| attribute | description | value |
+|--|--|--|
+|`app:neuButtonType`| type of the button | `elevated_flat` or `elevated_soft` |
+|`app:neuButtonRadius` | corner radius of button | dimension |
+| `app:neuPlatformColor` | color of neumorphic platform | color |
+| `app:neuPlatformAppearance` | appearance of neumorphic platform | style resource |
+| `app:neuFlatButtonColor` | color of flat button surface | color |
+| `app:neuFlatButtonAppearance` | appearance of flat button surface | style resource |
+| `app:neuButtonDrawable` | drawable resource of left icon | drawable resource |
+| `app:neuButtonDrawablePitRadius` | radius of the pit behind the icon | dimension |
+| `app:neuButtonIconAppearance` | appearance of the pit behind the icon | style resource |
+| `app:neuButtonCompatColor` | color of button on compat devices | color |
 
 This button is made up of three layers `baseModel`, `innerModel` and `buttonContentModel` named from bottom to top. `NeuButtonCustomModel` allows you to configure each of these layers and design button.
 ```swift
