@@ -31,8 +31,6 @@ let debossedView = UIView()
 debossedView.applyNeuStyle(model: NeuUIHelper.getDebossModel())
 ```
 
-`applyNeuStyle` function takes two arguments, which lets you configure with your own custom model. `NeuViewModel` has a list of properties to change baseColor, shadow models, light direction, etc.
-
 ### `applyNeuStyle` arguments
 
 | attribute | description | value |
