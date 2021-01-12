@@ -40,6 +40,25 @@ debossedView.applyNeuStyle(model: NeuUIHelper.getDebossModel())
 | `model`| struct which lets you configure base color, shadow direction and shadow offsets | `NeuViewModel` |
 | `showOnlyShadows` | enabling this will only render outer or inner shadows skipping the solid background part | Bool |
 
+### `NeuViewModel` attributes
+
+all colors are by default derived from base color. You can explictly pass different values when needed.
+
+| attribute | description | value |
+|--|--|--|
+| `baseColor`| base color based on which background and borders are rendered | UIColor |
+| `bgGradientColors` | colors array which renders background | [UIColor] |
+| `borderGradientColors` | colors array which renders borders | [UIColor] |
+| `borderGradientWidth` | outer border width | CGFloat |
+| `lightDirection` | an enum which lets define light direction | `NeuLightDirection` |
+| `shadowType` | an enum which lets define shadow type, outer or inner | `NeuShadowType` |
+| `lightShadowModel` | a model to customise shadow offsets of top shadow | `NeuShadowModel` |
+| `darkShadowModel` | a model to customise shadow offsets of bottom shadow | `NeuShadowModel` |
+| `blurAmount` | amount of guassian blur that has to be applied | CGFloat |
+| `hideLightShadow` | hides top shadow | Bool |
+| `hideDarkShadow` | hides bottom shadow | Bool |
+| `hideBorder` | hides outer border | Bool |
+
 There are three styles which can be applied over `UIButton`:
 ```swift
 elevatedSoft // an embossed button
