@@ -1,25 +1,44 @@
 # synth
 A framework designed over neumorphic style. Provides an extension over UIKit elements `UIView` and `UIButton`.
 
+![Banner](https://i.imgur.com/tKZeAwO.png "Banner")
+
 ## Installation
 It can be easily integrated with Cocoapods. Add this line to your podfile:
 ```swift
-pod 'NeumorphicKit'
+pod 'synth-ios'
 ```
 
 ## Requirements
 - iOS 11.0+
-- Swift 5.0+
+- Swift 5.1+
 
 ## Usage
+
+## `Embossed` and `Debossed` views
+
+![Embossed and Debossed Views](https://i.imgur.com/uqfvPE9.png "Embossed and Debossed Views")
+
 As it provides an extension over `UIView`, you can call it over any UI element
 ```swift
-import NeumorphicKit
-
-let neumorphicView = UIView()
-neumorphicView.applyNeuStyle()
+let embossedView = UIView()
+embossedView.applyNeuStyle()
 ```
-`applyNeuStyle` configures view with default configuration. This function takes two arguments, which lets you configure with your own custom model. `NeuViewModel` has a list of properties to change baseColor, shadow models, light direction, etc.
+calling `applyNeuStyle` on any view will give default embossed effect. There is also a helper function `getDebossModel()` in `NeuUIHelper` which provides debossed effect.
+
+```swift
+let debossedView = UIView()
+debossedView.applyNeuStyle(model: NeuUIHelper.getDebossModel())
+```
+
+`applyNeuStyle` function takes two arguments, which lets you configure with your own custom model. `NeuViewModel` has a list of properties to change baseColor, shadow models, light direction, etc.
+
+### `applyNeuStyle` arguments
+
+| attribute | description | value |
+|--|--|--|
+| `model`| struct which lets you configure base color, shadow direction and shadow offsets | `NeuViewModel` |
+| `showOnlyShadows` | enabling this will only render outer or inner shadows skipping the solid background part | Bool |
 
 There are three styles which can be applied over `UIButton`:
 ```swift
