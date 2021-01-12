@@ -11,6 +11,7 @@
 		D2156107254407E30025DE69 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2156106254407E20025DE69 /* ViewController.xib */; };
 		D2156116254411980025DE69 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2156115254411980025DE69 /* ButtonsViewController.swift */; };
 		D2156119254411A30025DE69 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2156118254411A30025DE69 /* ButtonsViewController.xib */; };
+		D23BBFA825ADBCAE003114D3 /* synth-ios.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D23BBFA725ADBCAE003114D3 /* synth-ios.podspec */; };
 		D25FDAAD258BD393003577AE /* GutterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25FDAAC258BD393003577AE /* GutterViewController.xib */; };
 		D25FDAB0258BD3A0003577AE /* GutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FDAAF258BD3A0003577AE /* GutterViewController.swift */; };
 		D287D3D1252CA164005DA7DC /* Synth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D298974A24929767003625A5 /* Synth.framework */; };
@@ -32,7 +33,6 @@
 		D298977F2492B85D003625A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D298977D2492B85D003625A5 /* Main.storyboard */; };
 		D29897812492B85F003625A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29897802492B85F003625A5 /* Assets.xcassets */; };
 		D29897842492B85F003625A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29897822492B85F003625A5 /* LaunchScreen.storyboard */; };
-		D2C5D33525A9BF2B00956841 /* Synth.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D2C5D33425A9BF2B00956841 /* Synth.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +64,7 @@
 		D2156106254407E20025DE69 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		D2156115254411980025DE69 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		D2156118254411A30025DE69 /* ButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
+		D23BBFA725ADBCAE003114D3 /* synth-ios.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = "synth-ios.podspec"; sourceTree = SOURCE_ROOT; };
 		D25FDAAC258BD393003577AE /* GutterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GutterViewController.xib; sourceTree = "<group>"; };
 		D25FDAAF258BD3A0003577AE /* GutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutterViewController.swift; sourceTree = "<group>"; };
 		D298974A24929767003625A5 /* Synth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Synth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +88,6 @@
 		D29897802492B85F003625A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D29897832492B85F003625A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D29897852492B85F003625A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2C5D33425A9BF2B00956841 /* Synth.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synth.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +122,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D23BBFA625ADBC68003114D3 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				D23BBFA725ADBCAE003114D3 /* synth-ios.podspec */,
+			);
+			path = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
 		D287D3D0252CA164005DA7DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +140,7 @@
 		D298974024929767003625A5 = {
 			isa = PBXGroup;
 			children = (
-				D2C5D33325A9BF1500956841 /* Podspec Metadata */,
+				D23BBFA625ADBC68003114D3 /* Podspec Metadata */,
 				D298974C24929767003625A5 /* Synth */,
 				D29897762492B85D003625A5 /* SynthExamples */,
 				D298974B24929767003625A5 /* Products */,
@@ -197,14 +205,6 @@
 				D29897852492B85F003625A5 /* Info.plist */,
 			);
 			path = SynthExamples;
-			sourceTree = "<group>";
-		};
-		D2C5D33325A9BF1500956841 /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				D2C5D33425A9BF2B00956841 /* Synth.podspec */,
-			);
-			path = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2C5D33525A9BF2B00956841 /* Synth.podspec in Resources */,
+				D23BBFA825ADBCAE003114D3 /* synth-ios.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
