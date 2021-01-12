@@ -2,10 +2,10 @@ Pod::Spec.new do |s|
 
   s.name           = "synth-ios"
   s.version        = "1.0.0"
-  s.summary        = "A short description of Synth."
-  s.description    = "A long description of Synth"
+  s.summary        = "A library to render neumorphic components in iOS"
+  s.description    = "A framework designed over neumorphic style which provides an extension over UIKit elements UIView and UIButton"
   s.homepage       = "https://www.cred.club/"
-  s.license        = "MIT"
+  s.license          = { :type => 'Apache', :file => 'LICENSE' }
   s.author         = "Prashant"
   s.platform       = :ios, "11.0"
   s.source         = { :path => '.' }
