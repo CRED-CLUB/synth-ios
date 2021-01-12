@@ -12,6 +12,7 @@
 		D2156116254411980025DE69 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2156115254411980025DE69 /* ButtonsViewController.swift */; };
 		D2156119254411A30025DE69 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2156118254411A30025DE69 /* ButtonsViewController.xib */; };
 		D23BBFA825ADBCAE003114D3 /* synth-ios.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D23BBFA725ADBCAE003114D3 /* synth-ios.podspec */; };
+		D23BBFAB25ADBD11003114D3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D23BBFAA25ADBD11003114D3 /* LICENSE */; };
 		D25FDAAD258BD393003577AE /* GutterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25FDAAC258BD393003577AE /* GutterViewController.xib */; };
 		D25FDAB0258BD3A0003577AE /* GutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FDAAF258BD3A0003577AE /* GutterViewController.swift */; };
 		D287D3D1252CA164005DA7DC /* Synth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D298974A24929767003625A5 /* Synth.framework */; };
@@ -65,6 +66,7 @@
 		D2156115254411980025DE69 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		D2156118254411A30025DE69 /* ButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
 		D23BBFA725ADBCAE003114D3 /* synth-ios.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = "synth-ios.podspec"; sourceTree = SOURCE_ROOT; };
+		D23BBFAA25ADBD11003114D3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		D25FDAAC258BD393003577AE /* GutterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GutterViewController.xib; sourceTree = "<group>"; };
 		D25FDAAF258BD3A0003577AE /* GutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutterViewController.swift; sourceTree = "<group>"; };
 		D298974A24929767003625A5 /* Synth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Synth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				D23BBFA725ADBCAE003114D3 /* synth-ios.podspec */,
+				D23BBFAA25ADBD11003114D3 /* LICENSE */,
 			);
 			path = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23BBFAB25ADBD11003114D3 /* LICENSE in Resources */,
 				D23BBFA825ADBCAE003114D3 /* synth-ios.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
