@@ -111,20 +111,6 @@ let flatButton = UIButton()
 flatButton.applyNeuBtnStyle(type: .elevatedFlatRound, title: "Spin")
 ```
 
-## all button attributes
-| attribute | description | value |
-|--|--|--|
-|`app:neuButtonType`| type of the button | `elevated_flat` or `elevated_soft` |
-|`app:neuButtonRadius` | corner radius of button | dimension |
-| `app:neuPlatformColor` | color of neumorphic platform | color |
-| `app:neuPlatformAppearance` | appearance of neumorphic platform | style resource |
-| `app:neuFlatButtonColor` | color of flat button surface | color |
-| `app:neuFlatButtonAppearance` | appearance of flat button surface | style resource |
-| `app:neuButtonDrawable` | drawable resource of left icon | drawable resource |
-| `app:neuButtonDrawablePitRadius` | radius of the pit behind the icon | dimension |
-| `app:neuButtonIconAppearance` | appearance of the pit behind the icon | style resource |
-| `app:neuButtonCompatColor` | color of button on compat devices | color |
-
 This button is made up of three layers `baseModel`, `innerModel` and `buttonContentModel` named from bottom to top. `NeuButtonCustomModel` allows you to configure each of these layers and design button.
 ```swift
 let model = NeuConstants.NeuButtonCustomModel()
