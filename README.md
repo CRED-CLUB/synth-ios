@@ -102,15 +102,6 @@ let flatButton = UIButton()
 flatButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Idle")
 ```
 
-## elevated flat round button
-
-![Elevated Flat Round Button](https://i.imgur.com/yWlyeyK.png "Elevated Flat Round Button")
-
-```swift
-let flatButton = UIButton()
-flatButton.applyNeuBtnStyle(type: .elevatedFlatRound, title: "Spin")
-```
-
 This button is made up of three layers `baseModel`, `innerModel` and `buttonContentModel` named from bottom to top. `NeuButtonCustomModel` allows you to configure each of these layers and design button.
 ```swift
 let model = NeuConstants.NeuButtonCustomModel()
