@@ -104,6 +104,7 @@ flatButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Idle")
 you can also add an image aligned left to this image. synth will render a neumorphic pit on which the image is rendered.
 ```swift
 softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
+softButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
 ```
 
 This button is made up of three layers `baseModel`, `innerModel` and `buttonContentModel` named from bottom to top. `NeuButtonCustomModel` allows you to configure each of these layers and design button.
