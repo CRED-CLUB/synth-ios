@@ -19,9 +19,9 @@ pod 'synth-ios'
 
 ## Usage
 
-### `Embossed` and `Debossed` views
+### Embossed and Debossed views
 
-![Embossed and Debossed Views](https://i.imgur.com/uqfvPE9.png "Embossed and Debossed Views")
+![Embossed and Debossed Views](https://i.imgur.com/BVirv0g.png "Embossed and Debossed Views")
 
 As it provides an extension over `UIView`, you can call it over any UI element
 ```swift
