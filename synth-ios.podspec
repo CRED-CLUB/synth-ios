@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license        = { :type => 'Apache', :file => 'LICENSE' }
   s.author         = { 'Prashant' => 'prashant.shrivastava@cred.club' }
   s.platform       = :ios, "11.0"
-  s.source         = { :path => '.' }
+  s.source         = { :git => 'https://github.com/CRED-CLUB/synth-ios.git', :tag => s.version.to_s }
   s.source_files   = "Synth/**/*.swift"
   s.swift_version  = "5.1"
   s.module_name    = 'Synth'
