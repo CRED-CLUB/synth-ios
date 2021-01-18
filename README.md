@@ -1,5 +1,9 @@
-# synth
-A framework designed over neumorphic style. Provides an extension over UIKit elements `UIView` and `UIButton`.
+# Synth
+Synth is CRED's inbuilt library for using Neuromorphic components in your app.
+
+What really is Neumorphism? It's an impressionistic style, playing with light, shadow, and depth to create a digital experience inspired by the physical world. That's the definition anyway. Our recommendation is you try it out to see what you make of it. If you do create something with Synth, let us know. We're excited to see where you take it.
+
+A note for the curious: if you wish to learn more about Synth, we have a post detailing the concept and CRED's philosophy behind it [here](https://blog.cred.club/team-cred/design/world-meet-neumorphism-open-sourcing-our-ui-framework/).
 
 ![Banner](https://i.imgur.com/tKZeAwO.png "Banner")
 
@@ -15,9 +19,9 @@ pod 'synth-ios'
 
 ## Usage
 
-### `Embossed` and `Debossed` views
+### Embossed and Debossed views
 
-![Embossed and Debossed Views](https://i.imgur.com/uqfvPE9.png "Embossed and Debossed Views")
+![Embossed and Debossed Views](https://i.imgur.com/BVirv0g.png "Embossed and Debossed Views")
 
 As it provides an extension over `UIView`, you can call it over any UI element
 ```swift
@@ -57,49 +61,50 @@ all colors are by default derived from base color. You can explictly pass differ
 | `hideDarkShadow` | hides bottom shadow | Bool |
 | `hideBorder` | hides outer border | Bool |
 
-# buttons
+# Buttons
 
 There are by default four styles which can be applied over `UIButton`:
 ```swift
 elevatedSoft // an embossed button
 elevatedSoftRound // a round embossed button
 elevatedFlat // flat button
-elevatedFlatRound // flat button
+elevatedFlatRound // flat round button
 ```
 
-## elevated soft button
+## Elevated soft button
 
-![Elevated Soft Button](https://i.imgur.com/HT0L6JT.png "Elevated Soft Button")
+![Elevated Soft Button](https://i.imgur.com/ih0WqFz.png "Elevated Soft Button")
 
 ```swift
 let softButton = UIButton()
 softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle")
 ```
 
-![Elevated Soft with image Button](https://i.imgur.com/1vc67oB.png "Elevated Soft with image Button")
+## Elevated soft round button
 
-you can also add an image aligned left to this image. synth will render a neumorphic pit on which the image is rendered.
-```swift
-softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
-```
-
-## elevated soft round button
-
-![elevated soft round button](https://i.imgur.com/igONywf.png "elevated soft round button")
+![Elevated soft round Button](https://i.imgur.com/eP17O6M.png "Elevated soft round Button")
 
 ```swift
 let roundButton = UIButton()
 roundButton.applyNeuBtnStyle(type: .elevatedSoftRound, image: UIImage(named: "plus"))
 ```
 
-## elevated flat button
+## Elevated flat button
 
-![Elevated Flat Button](https://i.imgur.com/yWlyeyK.png "Flat Button")
+![Elevated Flat Button](https://i.imgur.com/tgVOK5L.png "Elevated Flat Button")
 
 Elevated flat button renders a flat surface on top of the elevated neumorphic platform. this flat surface can be customized in two ways:
 ```swift
 let flatButton = UIButton()
 flatButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Idle")
+```
+
+![Drawable Button](https://i.imgur.com/Bnjb5Cj.png "Drawable Button")
+
+you can also add an image aligned left to this image. synth will render a neumorphic pit on which the image is rendered.
+```swift
+softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
+softButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
 ```
 
 This button is made up of three layers `baseModel`, `innerModel` and `buttonContentModel` named from bottom to top. `NeuButtonCustomModel` allows you to configure each of these layers and design button.
@@ -117,4 +122,30 @@ NeuUtils.baseColor = UIColor.red
 let textAttributes: [NSAttributedString.Key:Any] = [:]
 textAttributes[.foregroundColor] = .black
 NeuUtils.textAttributes = textAttributes
+```
+
+## Contributing
+
+Pull requests are welcome! We'd love help improving this library. Feel free to browse through open issues to look for things that need work. If you have a feature request or bug, please open a new issue so we can track it.
+
+## Contributors
+
+Synth would not have been possible if not for the contributions made by CRED's design and frontend teams.
+
+## License
+
+```
+Copyright 2020 Dreamplug Technologies Private Limited.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 ```
