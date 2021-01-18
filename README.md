@@ -1,5 +1,9 @@
-# synth
-A framework designed over neumorphic style. Provides an extension over UIKit elements `UIView` and `UIButton`.
+# Synth
+Synth is CRED's inbuilt library for using Neuromorphic components in your app.
+
+What really is Neumorphism? It's an impressionistic style, playing with light, shadow, and depth to create a digital experience inspired by the physical world. That's the definition anyway. Our recommendation is you try it out to see what you make of it. If you do create something with Synth, let us know. We're excited to see where you take it.
+
+A note for the curious: if you wish to learn more about Synth, we have a post detailing the concept and CRED's philosophy behind it [here](https://blog.cred.club/team-cred/design/world-meet-neumorphism-open-sourcing-our-ui-framework/).
 
 ![Banner](https://i.imgur.com/tKZeAwO.png "Banner")
 
@@ -57,7 +61,7 @@ all colors are by default derived from base color. You can explictly pass differ
 | `hideDarkShadow` | hides bottom shadow | Bool |
 | `hideBorder` | hides outer border | Bool |
 
-# buttons
+# Buttons
 
 There are by default four styles which can be applied over `UIButton`:
 ```swift
@@ -67,9 +71,9 @@ elevatedFlat // flat button
 elevatedFlatRound // flat button
 ```
 
-## elevated soft button
+## Elevated soft button
 
-![Elevated Soft Button](https://i.imgur.com/HT0L6JT.png "Elevated Soft Button")
+![Elevated Soft Button](https://i.imgur.com/ih0WqFz.png "Elevated Soft Button")
 
 ```swift
 let softButton = UIButton()
@@ -83,18 +87,18 @@ you can also add an image aligned left to this image. synth will render a neumor
 softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
 ```
 
-## elevated soft round button
+## Elevated soft round button
 
-![elevated soft round button](https://i.imgur.com/igONywf.png "elevated soft round button")
+![Elevated soft round Button](https://i.imgur.com/eP17O6M.png "Elevated soft round Button")
 
 ```swift
 let roundButton = UIButton()
 roundButton.applyNeuBtnStyle(type: .elevatedSoftRound, image: UIImage(named: "plus"))
 ```
 
-## elevated flat button
+## Elevated flat button
 
-![Elevated Flat Button](https://i.imgur.com/yWlyeyK.png "Flat Button")
+![Elevated Flat Button](https://i.imgur.com/tgVOK5L.png "Elevated Flat Button")
 
 Elevated flat button renders a flat surface on top of the elevated neumorphic platform. this flat surface can be customized in two ways:
 ```swift
