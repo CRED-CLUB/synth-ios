@@ -80,13 +80,6 @@ let softButton = UIButton()
 softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle")
 ```
 
-![Drawable Button](https://i.imgur.com/Bnjb5Cj.png "Drawable Button")
-
-you can also add an image aligned left to this image. synth will render a neumorphic pit on which the image is rendered.
-```swift
-softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
-```
-
 ## Elevated soft round button
 
 ![Elevated soft round Button](https://i.imgur.com/eP17O6M.png "Elevated soft round Button")
@@ -104,6 +97,13 @@ Elevated flat button renders a flat surface on top of the elevated neumorphic pl
 ```swift
 let flatButton = UIButton()
 flatButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Idle")
+```
+
+![Drawable Button](https://i.imgur.com/Bnjb5Cj.png "Drawable Button")
+
+you can also add an image aligned left to this image. synth will render a neumorphic pit on which the image is rendered.
+```swift
+softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle", image: UIImage(named: "plus"), imageDimension: 12)
 ```
 
 This button is made up of three layers `baseModel`, `innerModel` and `buttonContentModel` named from bottom to top. `NeuButtonCustomModel` allows you to configure each of these layers and design button.
