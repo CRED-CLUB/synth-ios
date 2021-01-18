@@ -2,11 +2,11 @@ Pod::Spec.new do |s|
 
   s.name           = "synth-ios"
   s.version        = "1.0.0"
-  s.summary        = "A library to render neumorphic components in iOS"
-  s.description    = "A framework designed over neumorphic style which provides an extension over UIKit elements UIView and UIButton"
+  s.summary        = "Synth is CRED's inbuilt library for using Neuromorphic components in your app."
+  s.description    = "What really is Neumorphism? It's an impressionistic style, playing with light, shadow, and depth to create a digital experience inspired by the physical world."
   s.homepage       = "https://www.cred.club/"
-  s.license          = { :type => 'Apache', :file => 'LICENSE' }
-  s.author         = "Prashant"
+  s.license        = { :type => 'Apache', :file => 'LICENSE' }
+  s.author         = { 'Prashant' => 'prashant.shrivastava@cred.club' }
   s.platform       = :ios, "11.0"
   s.source         = { :path => '.' }
   s.source_files   = "Synth/**/*.swift"
