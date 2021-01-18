@@ -80,7 +80,7 @@ let softButton = UIButton()
 softButton.applyNeuBtnStyle(type: .elevatedSoft, title: "Idle")
 ```
 
-![Elevated Soft with image Button](https://i.imgur.com/1vc67oB.png "Elevated Soft with image Button")
+![Drawable Button](https://i.imgur.com/Bnjb5Cj.png "Drawable Button")
 
 you can also add an image aligned left to this image. synth will render a neumorphic pit on which the image is rendered.
 ```swift
