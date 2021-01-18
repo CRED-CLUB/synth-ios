@@ -68,7 +68,7 @@ There are by default four styles which can be applied over `UIButton`:
 elevatedSoft // an embossed button
 elevatedSoftRound // a round embossed button
 elevatedFlat // flat button
-elevatedFlatRound // flat button
+elevatedFlatRound // flat round button
 ```
 
 ## Elevated soft button
