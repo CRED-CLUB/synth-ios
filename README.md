@@ -109,6 +109,8 @@ softButton.applyNeuBtnStyle(type: .elevatedFlat, title: "Idle", image: UIImage(n
 
 This button is made up of three layers `baseModel`, `innerModel` and `buttonContentModel` named from bottom to top. `NeuButtonCustomModel` allows you to configure each of these layers and design button.
 ```swift
+import Synth
+
 let model = NeuConstants.NeuButtonCustomModel()
 ... some configuration
 let customButton = UIButton()
