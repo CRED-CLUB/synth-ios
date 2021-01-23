@@ -8,10 +8,19 @@ A note for the curious: if you wish to learn more about Synth, we have a post de
 ![Banner](https://i.imgur.com/tKZeAwO.png "Banner")
 
 ## Installation
-It can be easily integrated with Cocoapods. Add this line to your podfile:
-```swift
+
+### CocoaPods
+
+Synth is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
 pod 'synth-ios'
 ```
+
+### Swift Package Manager
+
+Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
 ## Requirements
 - iOS 11.0+
