@@ -5,6 +5,8 @@ What really is Neumorphism? It's an impressionistic style, playing with light, s
 
 A note for the curious: if you wish to learn more about Synth, we have a post detailing the concept and CRED's philosophy behind it [here](https://blog.cred.club/team-cred/design/world-meet-neumorphism-open-sourcing-our-ui-framework/).
 
+For Android, checkout [Synth-Android](https://github.com/CRED-CLUB/synth-android)
+
 ![Banner](https://i.imgur.com/tKZeAwO.png "Banner")
 
 ## Installation
