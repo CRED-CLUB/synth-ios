@@ -65,7 +65,7 @@
 		D2156106254407E20025DE69 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		D2156115254411980025DE69 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		D2156118254411A30025DE69 /* ButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
-		D23BBFA725ADBCAE003114D3 /* synth-ios.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = "synth-ios.podspec"; sourceTree = SOURCE_ROOT; };
+		D23BBFA725ADBCAE003114D3 /* synth-ios.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "synth-ios.podspec"; sourceTree = SOURCE_ROOT; };
 		D23BBFAA25ADBD11003114D3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		D25FDAAC258BD393003577AE /* GutterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GutterViewController.xib; sourceTree = "<group>"; };
 		D25FDAAF258BD3A0003577AE /* GutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutterViewController.swift; sourceTree = "<group>"; };
@@ -561,13 +561,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NWJALMT777;
 				INFOPLIST_FILE = SynthExamples/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cred.SynthExamples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cred.SynthExamples.amit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -579,13 +580,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NWJALMT777;
 				INFOPLIST_FILE = SynthExamples/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cred.SynthExamples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cred.SynthExamples.amit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
