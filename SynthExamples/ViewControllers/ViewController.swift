@@ -18,11 +18,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.isHidden = true
-        
+        NeuUtils.baseColor = .darkGray
         view.backgroundColor = NeuUtils.baseColor
         
         containerView.layer.cornerRadius = 20
-        containerView.applyNeuStyle()
+        containerView.applyNeuStyle(model: NeuUIHelper.getDebossModel())
         
         let buttonTapGesture = UITapGestureRecognizer(target: self, action: #selector(exploreButtonsClicked))
         buttonsImageView.addGestureRecognizer(buttonTapGesture)

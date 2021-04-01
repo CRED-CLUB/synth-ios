@@ -3,26 +3,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "Synth",
+    name: "synth-ios",
     platforms: [
         .iOS(.v10)
     ],
     products: [
         .library(
-            name: "Synth",
-            targets: ["Synth"]
+            name: "synth-ios",
+            targets: ["synth-ios"]
         ),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "Synth",
+            name: "synth-ios",
             dependencies: [],
-            path: "Synth/Source"
+            path: "synth-ios/Source"
         ),
         .testTarget(
-            name: "synth-iosTests",
-            dependencies: ["Synth"]
+            name: "synth-ios-tests",
+            dependencies: ["synth-ios"]
         ),
     ]
 )
