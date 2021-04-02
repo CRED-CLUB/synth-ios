@@ -18,10 +18,10 @@ let package = Package(
         .target(
             name: "synth-ios",
             dependencies: [],
-            path: "synth-ios/Source"
+            path: "Synth/Source"
         ),
         .testTarget(
-            name: "synth-ios-tests",
+            name: "synth-iosTests",
             dependencies: ["synth-ios"]
         ),
     ]
