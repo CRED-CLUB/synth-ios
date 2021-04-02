@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Synth",
+    name: "synth-ios",
     platforms: [
         .iOS(.v10)
     ],
