@@ -10,9 +10,21 @@ For Android, checkout [Synth-Android](https://github.com/CRED-CLUB/synth-android
 ![Banner](https://i.imgur.com/tKZeAwO.png "Banner")
 
 ## Installation
+
+### Cocoapods
+
 It can be easily integrated with Cocoapods. Add this line to your podfile:
 ```swift
 pod 'synth-ios'
+```
+
+### Swift Package Manager
+
+Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app) to add a new dependency to your project. If your `Package.swift` is already setup, add this line to project dependencies.
+```swift
+dependencies: [
+    .package(url: "https://github.com/CRED-CLUB/synth-ios", from: "1.0.0")
+],
 ```
 
 ## Requirements
