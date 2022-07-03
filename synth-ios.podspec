@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name           = "synth-ios"
-  s.version        = "1.0.0"
+  s.version        = "1.0.1"
   s.summary        = "Synth is CRED's inbuilt library for using Neuromorphic components in your app."
   s.description    = "What really is Neumorphism? It's an impressionistic style, playing with light, shadow, and depth to create a digital experience inspired by the physical world."
   s.homepage       = "https://www.cred.club/"
